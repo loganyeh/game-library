@@ -18,19 +18,31 @@ function DashboardPage(){
             <div className="h-auto w-screen">
 
                 {/* Page Header ✅ */}
-                <div className="h-12 w-full flex justify-between items-center bg-red-600">
+                <div className="border-b border-white h-12 w-full flex justify-between items-center bg-red-600">
                     <div className="border-3 border-white h-6 w-auto ml-4 px-1 flex justify-center items-center text-white text-base font-bold rounded-2xl">Nintendo</div>
                     <div className="h-auto w-auto mr-4 flex justify-center items-center text-3xl">🇺🇸</div>
                 </div>
 
-                {/* Showcase Slideshow */}
-                <div className="border h-auto w-full">
+                {/* Showcase Slideshow ✅ */}
+                <div className="h-auto w-full">
+
                     {/* Image Slideshow */}
-                    <div className="border h-[425px] w-full">
-                        image slideshow
+                    <div className="h-[425px] w-full bg-blue-300">
+                        image slideshow 
+                        {/* <i className='bx bx-pause'></i> */}
                     </div>
+
                     {/* Slideshow Preview */}
-                    <div className="border h-20 w-full">slidershow preview images</div>
+                    <div className="h-20 w-full flex flex-col justify-center items-center">
+                        <div className="h-full w-9/12 flex justify-between items-center">
+                            <div className="h-8 w-8 flex justify-center items-center bg-red-600 rounded-full"><i className='bx bx-pause text-white text-4xl'></i></div>
+                            {Array.from({length: 4}).map((_, index) => {
+                                return <div key={index} className="h-12 w-12 bg-blue-300 rounded-lg"></div>
+                            })}
+                        </div>
+                        <div className="border border-gray-300 h-auto w-11/12"></div>
+                    </div>
+
                 </div>
 
                 {/* Featured Block */}
