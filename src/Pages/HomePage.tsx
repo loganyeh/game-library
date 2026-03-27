@@ -76,9 +76,8 @@ function DashboardPage(){
                 </div>
                 {/* PRIOR MORE PRECISE H/W PIXELS */}
 
-                {/* Today! Block */}
+                {/* Today! Block ✅ */}
                 <div className="border-b border-gray-300 h-auto w-full">
-                {/* <div className="border-b border-gray-300 h-[500px] w-full"> */}
 
                     {/* title */}
                     <div className="h-16 w-full flex justify-start items-end">
@@ -105,7 +104,7 @@ function DashboardPage(){
                     </div> 
 
                     <div className="h-24 w-full flex justify-center items-start">
-                        <span className="mt-4 pl-4 text-[10px] text-gray-700">
+                        <span className="mt-4 pl-4 text-[10px] text-gray-700 font-light">
                             Nintendo Account, compatible smart device and persistent internet connection required. Data charges may apply. Requires iOS 16.0 or later. Requires Android 10.0 or later.
                         </span>
                     </div>
