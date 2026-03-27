@@ -4,7 +4,9 @@ function DashboardPage(){
     
     return(
         <>
-            <div className="border-4 border-blue-600 h-screen w-screen"></div>
+            <div className="border-2 border-red-600 h-screen w-screen">
+                
+            </div>
         </>
     )
 }
