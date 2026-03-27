@@ -40,16 +40,41 @@ function DashboardPage(){
                                 return <div key={index} className="h-12 w-12 bg-blue-300 rounded-lg"></div>
                             })}
                         </div>
-                        <div className="border border-gray-300 h-auto w-11/12"></div>
+                        <div className="border-b border-gray-300 h-auto w-11/12"></div>
                     </div>
 
                 </div>
 
                 {/* Featured Block */}
-                <div className="border-2 border-red-600 h-[400px] w-full">Featured</div>
+                <div className="border-b border-gray-300 h-[400px] w-full">
+                    
+                    {/* title */}
+                    <div className="h-[60px] w-full flex justify-start items-end">
+                        <span className="ml-4 mb-2 tracking-wider text-xl text-gray-600 font-bold">Featured</span>
+                    </div>
+
+                    {/* Featured Scroll Tiles */}
+                    <div className="h-[290px] w-full flex justify-start items-center">
+
+                        {Array.from({length: 1}).map((_, index) => {
+                            return <div key={index} className="border border-gray-300 h-[250px] w-52 mx-4 rounded-lg">
+                                <div className="h-[115px] w-full bg-blue-300 rounded-t-lg"></div>
+                                <div className="h-[135px] w-full flex flex-col justify-between items-center rounded-b-lg">
+                                    <div className="h-11 flex justify-center items-center tracking-wide font-bold text-sm text-gray-700">Play the free demo today!</div>
+                                    <div className="h-auto w-full">
+                                        <span className="h-10 w-auto ml-2 px-2 py-0.5 bg-blue-700 text-white text-[10px] font-medium rounded-xl">Pre-order now</span>
+                                        <div className="h-8 mt-1 flex justify-start items-start"><span className="border-l-2 border-red-600 ml-2 pl-1 text-[10px] text-gray-600">Nintendo Switch</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        })}
+
+                    </div>
+
+                </div>
 
                 {/* Today! Block */}
-                <div className="border-2 border-red-600 h-[500px] w-full">Today! Block</div>
+                <div className="h-[500px] w-full">Today! Block</div>
 
                 {/* Nintendo Switch 2 Block */}
                 <div className="border-2 border-red-600 h-[500px] w-full">Nintendo Switch 2 Block</div>
