@@ -1,10 +1,11 @@
 import { fetchPlatforms } from "../API/api";
 import { useEffect } from "react";
 
+// SHELL comps
+import Header from "../Components/Shell/Header";
+import Footer from "../Components/Shell/Footer";
+
 function DashboardPage(){
-
-    const aboutNintendoData = ["Careers", "Corporate Social Responsibility"];
-
     const footerData = [
         {title: "About Nintendo", links: ["Careers", "Corporate Responsibility"]},
         {title: "Shop", links: ["Games", "Hardware", "Merchandise", "Sales and deals", "Exclusives", "Nintendo Switch Online", "Nintendo Store US"]},
@@ -24,17 +25,13 @@ function DashboardPage(){
         };
         // getPlatform();
     }, [])
-    
 
     return(
         <>
             <div className="h-auto w-screen">
 
                 {/* Page Header ✅ */}
-                <div className="border-b border-white h-12 w-full flex justify-between items-center bg-red-600">
-                    <div className="border-3 border-white h-6 w-auto ml-4 px-1 flex justify-center items-center text-white text-base font-bold rounded-2xl">Nintendo</div>
-                    <div className="h-auto w-auto mr-4 flex justify-center items-center text-3xl">🇺🇸</div>
-                </div>
+                <Header />
 
                 {/* Showcase Slideshow ✅ */}
                 <div className="h-auto w-full">
@@ -415,6 +412,10 @@ function DashboardPage(){
                     </div>
 
                 </div>
+                
+
+                {/* left of here work on footer component with new TYPESCCRIPT  */}
+                
 
             </div>
         </>

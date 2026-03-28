@@ -1,6 +1,6 @@
 
 
-function Footer(){
+function Footer({ data }){
 
     return(
         <>
