@@ -278,26 +278,75 @@ function DashboardPage(){
                 </div>
 
                 {/* Characters Block */}
-                <div className="h-auto w-full flex flex-wrap justify-around items-center">
+                <div className="border-b border-gray-300 h-auto w-full flex flex-col justify-start items-center">
 
                     {/* title */}
-                    <div className="h-20 w-full">character title</div>
+                    <div className="h-16 w-11/12 flex justify-start items-end">
+                        <span className="w-full mb-2 tracking-wider text-xl text-gray-600 font-bold">Characters</span>
+                    </div>
 
                     {/* tiles */}
-                    {Array.from({length: 8}).map((_, index) => {
-                        return <div key={index} className="border h-40 w-40 my-4"></div>
-                    })}
+                    <div className="h-auto w-11/12 flex flex-wrap justify-between items-center">
+                        {Array.from({length: 8}).map((_, index) => {
+                            return <div key={index} className="h-auto w-40 mb-6">
+                                        <div className="border h-40 w-40 bg-blue-300 rounded-lg"></div>
+                                        <div className="min-h-8 w-full my-1 flex justify-star items-center text-xl font-bold text-gray-600 break-word"> Super Mario</div>
+                                    </div>
+                        })}
+                    </div>
                     
                 </div>
 
                 {/* Digital Best Sellers */}
-                <div className="border h-auto w-full pb-20">
-                    
-                    <div className="border border-red-600 h-[525px] w-full">Digital Best Sellers</div>
-                
-                {/* Digital New Releases */}
-                    <div className="border border-red-600 h-[525px] w-full">Digital New Releases</div>
-                </div>
+                {Array.from({length: 2}).map((_, index) => {
+                    return <div key={index} className="border h-auto w-full pb-10">
+                                <div className="h-28 w-full flex justify-center">
+                                    <div className="h-28 w-11/12 flex flex-col justify-end items-start">
+                                        <span className="w-full mb-2 tracking-wider text-xl text-gray-600 font-bold">Digital Best Sellers</span>
+                                        <div className="border-b-2 border-red-600 mb-3">
+                                            <span className="text-sm text-red-600 font-semibold tracking-wide">See full list</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="h-auto w-auto mt-2 pl-5 pb-12 flex overflow-x-auto scroll-smooth">
+                                    {Array.from({length: 5}).map((_, index) => {
+                                        return <div key={index} className="border border-gray-600 min-h-96 w-64 mx-4 rounded-lg shrink-0">
+                                                    <div className="h-5 w-full bg-red-600 flex justify-center items-center text-white font-bold rounded-t-lg">2</div>
+
+                                                    <div className="h-52 w-full bg-blue-300"></div>
+
+                                                    <div className="h-auto w-full flex flex-col justify-center items-center">
+                                                        <div className="h-auto w-11/12 mt-3 flex justify-start items-center font-semibold text-base text-gray-700 line-clamp-2">Super Mario Bros. Wonder - Nintendo Switch 2</div>
+                                                        <div className="h-auto w-11/12 font-light text-[11px] text-gray-600">3/26/26</div>
+
+                                                        <div className="h-auto w-11/12">
+                                                            <span className="px-2 bg-red-600 text-white text-[12px] rounded-xl">New!</span>
+                                                        </div>
+
+                                                        <div className="w-11/12 flex justify-start items-center text-sm font-semibold text-gray-700">$79.99</div>
+
+                                                        <div className="h-auto w-11/12 flex justify-center items-center">
+                                                            <div className="h-full w-1/2 flex justify-start items-center">
+                                                                <div className="mx-1 flex justify-center items-center"><i className='bx bx-plus-medical text-lg text-gray-600'></i></div>
+                                                                <div className="text-[11px] text-gray-600">Games</div>
+                                                            </div>
+                                                            <div className="h-full w-1/2 flex justify-end items-center">
+                                                                <div className="mr-2 flex justify-center items-center"><i className='bx bx-heart text-3xl text-red-600' ></i></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                    })}
+
+                                    <div className="h-96 w-40 flex items-end shrink-0">
+                                        <div className="h-[364px] w-full flex justify-center items-center bg-red-600 text-white font-semibold text-base tracking-wide rounded-md">See full list</div>
+                                    </div>
+
+                                </div>
+                            
+                            </div>
+                            })}
 
                 {/* Footer */}
                 <div className="border-2 border-purple-600 h-auto w-full">
