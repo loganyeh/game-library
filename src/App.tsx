@@ -4,7 +4,7 @@ import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // pages
-import DashboardPage from './Pages/DashboardPage'
+import HomePage from './Pages/HomePage'
 
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<DashboardPage />} />
+          <Route path='/' element={<HomePage />} />
         </Routes>
       </BrowserRouter>
     </>
