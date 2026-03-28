@@ -3,6 +3,19 @@ import { useEffect } from "react";
 
 function DashboardPage(){
 
+    const aboutNintendoData = ["Careers", "Corporate Social Responsibility"];
+
+    const footerData = [
+        {title: "About Nintendo", links: ["Careers", "Corporate Responsibility"]},
+        {title: "Shop", links: ["Games", "Hardware", "Merchandise", "Sales and deals", "Exclusives", "Nintendo Switch Online", "Nintendo Store US"]},
+        {title: "Orders", links: ["Order details", "Shipping info", "Refunds and returns", "FAQ"]},
+        {title: "Support", links: ["Nintendo Switch 2", "Nintendo Switch", "Nintendo Account", "Apps and other products", "Other systems", "Service Center", "Nintendo product recycling", "Warranty", "Licensed product information"]},
+        {title: "Parents", links: ["Info for parents", "Parental controls"]},
+        {title: "Privacy", links: ["Privacy policy", "Parental controls"]},
+        {title: "Community guidelines", links: ["Community guidelines", "Online safety"]},
+        {title: "Documents and policies", links: ["Health and safety precautions", "Wireless regulatory info", "Supply chain transparency"]},
+    ];
+
     useEffect(() => {
         async function getPlatform(){
             const data = await fetchPlatforms();
@@ -299,7 +312,7 @@ function DashboardPage(){
 
                 {/* Digital Best Sellers */}
                 {Array.from({length: 2}).map((_, index) => {
-                    return <div key={index} className="border h-auto w-full pb-10">
+                    return <div key={index} className="h-auto w-full">
                                 <div className="h-28 w-full flex justify-center">
                                     <div className="h-28 w-11/12 flex flex-col justify-end items-start">
                                         <span className="w-full mb-2 tracking-wider text-xl text-gray-600 font-bold">Digital Best Sellers</span>
@@ -349,16 +362,57 @@ function DashboardPage(){
                             })}
 
                 {/* Footer */}
-                <div className="border-2 border-purple-600 h-auto w-full">
+                <div className="h-auto w-full mt-18">
                     
                     {/* Logo */}
-                    <div className="h-32 w-full">Footer Head Block</div>
+                    <div className="h-32 w-full bg-red-600 flex justify-center items-center">
+                        <div className="border-5 border-white px-2 text-2xl text-white font-bold tracking-widest rounded-3xl">Nintendo</div>
+                    </div>
 
                     {/* Links */}
-                    <div className="border h-[1250px] w-full">link columns</div>
+                    <div className="h-auto w-full flex flex-col justify-start items-center mt-12">
+                        {footerData.map((data, index) => {
+                            return <div key={index} className="border-l border-gray-300 h-auto w-4/5 mb-8 pl-8 flex flex-col">
+                                        <div className="h-10 flex items-center text-lg text-gray-700 font-semibold tracking-wide">{data.title || "About Nintendo"}</div>
+                                        
+                                        <div className="h-auto flex flex-col mt-2">
+                                            <div className="h-6 mb-1 flex items-center text-sm text-red-600 font-bold tracking-wide">Careers</div>
+                                            {data.links.map((link, index) => {
+                                                return <div key={index} className="h-6 mb-2 flex items-center text-sm text-red-600 font-bold tracking-wide">{link || "Careers"}</div>
+                                            })}
+                                        </div>
+                                    </div>
+                        })}
+                    </div>
 
-                    {/* Copyrights */}
-                    <div className="border-2 border-red-600 h-[360px] w-full">copyright</div>
+                    <div className="h-auto w-full flex justify-center items-center">
+                        <div className="h-auto w-2/3 flex justify-between items-center">
+                            <div className="flex justify-center items-center"><i className='bx bxl-facebook-circle text-4xl text-zinc-700' ></i></div>
+                            <div className="flex justify-center items-center"><i className='bx bxl-instagram text-4xl text-zinc-700' ></i></div>
+                            <div className="flex justify-center items-center"><i className='bx bxl-twitter text-4xl text-zinc-700' ></i></div>
+                            <div className="flex justify-center items-center"><i className='bx bxl-youtube text-4xl text-zinc-700' ></i></div>
+                        </div>
+                    </div>
+
+                    <div className="h-44 w-full flex justify-center items-center">
+                        <div className="border h-18 w-auto flex justify-center items-center">Place Advertisement Here</div>
+                    </div>
+
+
+                    <div className="h-96 w-full bg-zinc-800 flex justify-center">
+
+                        <div className="h-full w-8/12 flex flex-col justify-start">
+
+                            <div className="mt-8 flex justify-center items-center text-white text-[10px] tracking-wide">© Nintendo.Games are property of their respective owners.Nintendo of America Inc.Headquarters are in Redmond, Washington, USA</div>
+                            <div className="mt-6 flex justify-between items-center text-white text-[10px] font-light">
+                                <div>Contact us</div>
+                                <div>Website feedback</div>
+                                <div>Terms of Use</div>
+                            </div>
+
+                            <div className="mt-8 flex justify-center items-center text-white text-sm">🇺🇸 English (United States)</div>
+                        </div>
+                    </div>
 
                 </div>
 
