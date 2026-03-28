@@ -111,30 +111,145 @@ function DashboardPage(){
 
                 </div>
 
+
                 {/* Nintendo Switch 2 Block */}
-                <div className="h-[500px] w-full">Nintendo Switch 2 Block</div>
+                <div className="border-b border-gray-300 h-auto w-full">
+
+                    {/* title */}
+                    <div className="h-16 w-full flex justify-start items-end">
+                        <span className="ml-4 mb-2 tracking-wider text-xl text-gray-600 font-bold">Nintendo Switch 2</span>
+                    </div>
+
+                    {/* nintendo today image */}
+                    <div className="h-auto w-full flex justify-center items-start">
+                        <div className="h-44 w-11/12 rounded-lg">
+                            <div className="h-36 bg-blue-300 rounded-t-lg"></div>
+                            <div className="h-8 bg-red-600 flex justify-center items-center rounded-b-lg">
+                                <div className="h-5 w-5 mr-2 flex justify-center items-center bg-yellow-400 rounded-sm"><i className='bx bx-question-mark text-xl text-white' ></i></div>
+                                <div className="text-white text-sm font-medium tracking-wider">Nintendo Today!</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="h-28 w-full mt-8 flex justify-center items-center">
+                        <span className="h-auto w-11/12 text-lg font-bold text-gray-700 tracking-wider">Enjoy ways to play alongside Mario, Peach and many other Mushroom Kingdom friends on the Nintendo Switch 2 system.</span>
+                    </div>
+
+                   <div className="h-auto w-full mt-6 mb-8 flex justify-center items-center">
+                        <div className="h-12 w-11/12 flex justify-center items-center bg-red-600 text-white font-semibold text-base tracking-wider rounded-lg">Learn More</div>
+                    </div> 
+
+                </div>
 
                 {/* Online Store */}
-                <div className="border-2 border-red-600 h-[475px] w-full">Online Store</div>
+                <div className="border-b border-gray-300 h-auto w-full">
+
+                    {/* title */}
+                    <div className="h-16 w-full flex justify-start items-end">
+                        <span className="ml-4 mb-2 tracking-wider text-xl text-gray-600 font-bold">Online Store</span>
+                    </div>
+
+                    {/* nintendo today image */}
+                    <div className="h-auto w-full flex justify-center items-start">
+                        <div className="h-44 w-11/12 rounded-lg">
+                            <div className="h-36 bg-blue-300 rounded-t-lg"></div>
+                            <div className="h-8 bg-red-600 flex justify-center items-center rounded-b-lg">
+                                <div className="h-5 w-5 mr-2 flex justify-center items-center bg-yellow-400 rounded-sm"><i className='bx bx-question-mark text-xl text-white' ></i></div>
+                                <div className="text-white text-sm font-medium tracking-wider">Nintendo Today!</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="h-28 w-full mt-8 flex justify-center items-center">
+                        <span className="h-auto w-11/12 text-lg font-bold text-gray-700 tracking-wider">Shop games, exclusive Nintendo merchandise, and more! Plus, get free shipping on orders $50 and over.</span>
+                    </div>
+
+                   <div className="h-auto w-full mt-6 mb-8 flex justify-center items-center">
+                        <div className="h-12 w-11/12 flex justify-center items-center bg-red-600 text-white font-semibold text-base tracking-wider rounded-lg">Start Shopping</div>
+                    </div> 
+
+                </div>
 
                 {/* Nintendo Switch Online + Expansion Pack */}
-                <div className="border-2 border-red-600 h-[550px] w-full">Nintendo Switch Online + Expansion Pack</div>
+                <div className="border-b border-gray-300 h-auto w-full">
+
+                    {/* title */}
+                    <div className="h-16 w-full mt-6 flex justify-start items-end">
+                        <span className="w-10/12 ml-4 mb-2 tracking-wider text-xl text-gray-600 font-bold">Nintendo Switch Online + Expansion Pack</span>
+                    </div>
+
+                    {/* nintendo today image */}
+                    <div className="h-auto w-full flex justify-center items-start">
+                        <div className="h-44 w-11/12 rounded-lg">
+                            <div className="h-36 bg-blue-300 rounded-t-lg"></div>
+                            <div className="h-8 bg-red-600 flex justify-center items-center rounded-b-lg">
+                                <div className="h-5 w-5 mr-2 flex justify-center items-center bg-yellow-400 rounded-sm"><i className='bx bx-question-mark text-xl text-white' ></i></div>
+                                <div className="text-white text-sm font-medium tracking-wider">Nintendo Today!</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="h-28 w-full mt-2 flex justify-center items-center">
+                        <span className="h-auto w-11/12 text-lg font-bold text-gray-700 tracking-wider">Play online, discover the classics, and more</span>
+                    </div>
+
+                   <div className="h-auto w-full mt-2 my-4 flex justify-center items-center">
+                        <div className="h-12 w-11/12 flex justify-center items-center bg-red-600 text-white font-semibold text-base tracking-wider rounded-lg">Learn More</div>
+                    </div> 
+
+                    <div className="h-24 w-full flex justify-center items-start">
+                        <span className=" pl-4 text-[10px] text-gray-700 font-light">
+                            *Full version of game required to use the content for that game. Sold separately. For details visit https://support.nintendo.com/switch2/upgradepack. Terms apply. https://www.nintendo.com/us/purchase-terms/
+                        </span>
+                    </div>
+
+
+                </div>
 
                 {/* News Block */}
                 <div className="border-2 border-orange-500 h-auto w-full">
 
-                    {/* New Article 1 Big */}
-                    <div className="border h-[450px] w-full">news article 1</div>
+                    {/* title */}
+                    <div className="h-16 w-full flex justify-start items-end">
+                        <span className="w-10/12 ml-4 mb-2 tracking-wider text-xl text-gray-600 font-bold">News</span>
+                    </div>
 
-                    {/* New Article 2 Big */}
-                    <div className="border h-[450px] w-full">news article 2</div>
+                    {/* New Article 1 Big */}
+                    {Array.from({length: 2}).map((_, index) => {
+                        return <div key={index} className="h-auto w-full mb-8 flex flex-col justify-center items-center">
+
+                                    <div className="h-auto w-11/12 rounded-lg">
+                                        <div className="h-48 bg-blue-300 rounded-lg"></div>
+                                    </div>
+
+                                    <div className="h-11 w-11/12 flex justify-start items-center">
+                                        <div className="mr-1 flex justify-center items-center"><i className='bx bx-plus-medical text-red-600 text-2xl' ></i></div>
+                                        <div className="text-gray-700 font-light text-sm">03/27/26</div>
+                                    </div>
+
+                                    <div className="h-auto w-11/12 text-gray-800 font-semibold text-base tracking-wide line-clamp-2">Get ready for some wondrous new content for Super Mario Bros. Wonder—exclusive to Nintendo Switch 2!</div>
+
+                                    <div className="h-auto w-11/12 mt-2 text-gray-800 line-clamp-2 text-sm font-light">The Super Mario Bros.™ Wonder – Nintendo Switch™ 2 Edition + Meetup in Bellabel Park game is out now and brings a bouquet of new experiences to the Flower Kingdom. Nintendo Switch 2 players will be able to check out Bellabel Park and visit the new a…</div>
+
+                                    <div className="h-auto w-11/12">
+                                        <span className="border-b-2 border-red-600 pb-0.5 text-red-600 text-sm tracking-wider font-semibold">Read More</span>
+                                    </div>
+
+                                </div>
+                    })}
 
                     {/* News Arrticle Small 2x2 */}
-                    <div className="border h-[550px] w-full flex flex-wrap">
-                        <div className="border border-red-600 h-1/2 w-1/2">1</div>
-                        <div className="border border-red-600 h-1/2 w-1/2">2</div>
-                        <div className="border border-red-600 h-1/2 w-1/2">3</div>
-                        <div className="border border-red-600 h-1/2 w-1/2">4</div>
+                    <div className="border h-auto w-full flex justify-center items-center">
+
+                        <div className="border h-full w-11/12 flex flex-wrap justify-between">
+                            {Array.from({length: 2}).map((_, index) => {
+                                return <div key={index} className="border border-red-600 h-50 w-40">
+                                            <div className="border h-24 w-full rounded-lg"></div>
+                                            <div></div>
+                                        </div>
+                            })}
+                        </div>
+
                     </div>
 
                     {/* See all news articles BUTTON */}
