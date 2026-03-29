@@ -8,18 +8,36 @@ import Footer from "../Components/Shell/Footer";
 // Comps
 import ShowcaseSlideshow from "../Components/HomePageComponents/ShowcaseSlideshow";
 import FeaturedSection from "../Components/HomePageComponents/FeaturedSection";
-import TodaySection from "../Components/HomePageComponents/TodaySection";
-import ConsoleSection from "../Components/HomePageComponents/ConsoleSection";
-import OnlineStoreSection from "../Components/HomePageComponents/OnlineStoreSection";
-import OnlineExpansionSection from "../Components/HomePageComponents/OnlineExpansionSection";
+import RedButtonBlock from "../Components/HomePageComponents/RedButtonBlock";
 import NewsSection from "../Components/HomePageComponents/NewsSection";
 import CharactersSection from "../Components/HomePageComponents/CharactersSection";
 import DigitalsSection from "../Components/HomePageComponents/DigitalsSection";
 
-import RedButtonBlock from "../Components/HomePageComponents/RedButtonBlock";
+//  types
+type RedButtonBlockType = {
+    title: string;
+    description: string;
+    buttonText: string;
+    finePrint: string;
+    icon: string;
+}
 
+type charactersSectionDataType = {
+   characters: string[];
+};
 
 function DashboardPage(){
+    const redButtonBlockData: RedButtonBlockType[] = [
+        {title: "Nintendo Today!", description: "Your movie companion: Nintendo Today!", buttonText: "Learn more", finePrint: "Nintendo Account, compatible smart device and persistent internet connection required. Data charges may apply. Requires iOS 16.0 or later. Requires Android 10.0 or later.", icon: "" },
+        {title: "Nintendo Switch 2", description: "Enjoy ways to play alongside Mario, Peach and many other Mushroom Kingdom friends on the Nintendo Switch 2 system.", buttonText: "Learn more", finePrint: "", icon: ""},
+        {title: "Online Store", description: "Shop games, exclusive Nintendo merchandise, and more! Plus, get free shipping on orders $50 and over.", buttonText: "Start shopping", finePrint: "", icon: ""},
+        {title: "Nintendo Switch Online + Expansion Pack", description: "Play online, discover the classics, and more", buttonText: "Learn more", finePrint: "*Full version of game required to use the content for that game. Sold separately. For details visit https://support.nintendo.com/switch2/upgradepack. Terms apply. https://www.nintendo.com/us/purchase-terms/", icon: "" },
+    ]
+
+    const charactersSectionData: charactersSectionDataType = {
+        characters: ["Super Mario", "The Legend of Zelda", "Splatoon", "Kirby", "Pikmin", "Animal Crossing", "Metroid", "Pokemon"],
+    };
+
     const footerData = [
         {title: "About Nintendo", links: ["Careers", "Corporate Responsibility"]},
         {title: "Shop", links: ["Games", "Hardware", "Merchandise", "Sales and deals", "Exclusives", "Nintendo Switch Online", "Nintendo Store US"]},
@@ -48,101 +66,17 @@ function DashboardPage(){
 
                 <ShowcaseSlideshow />
 
-                <RedButtonBlock title="Nintendo Today!" description="Your movie companion: Nintendo Today!" buttonText="Learn more" finePrint="Nintendo Account, compatible smart device and persistent internet connection required. Data charges may apply. Requires iOS 16.0 or later. Requires Android 10.0 or later." />
-                <RedButtonBlock title="Nintendo Switch 2" description="Enjoy ways to play alongside Mario, Peach and many other Mushroom Kingdom friends on the Nintendo Switch 2 system." buttonText="Learn more" finePrint="" />
-                <RedButtonBlock title="Online Store" description="Shop games, exclusive Nintendo merchandise, and more! Plus, get free shipping on orders $50 and over." buttonText="Start shopping" finePrint="" />
-                <RedButtonBlock title="Nintendo Switch Online + Expansion Pack" description="Play online, discover the classics, and more" buttonText="Learn more" finePrint="*Full version of game required to use the content for that game. Sold separately. For details visit https://support.nintendo.com/switch2/upgradepack. Terms apply. https://www.nintendo.com/us/purchase-terms/" />
+                <FeaturedSection />
+
+                {redButtonBlockData.map((data, index) => {
+                    return <RedButtonBlock key={index} title={data.title} description={data.description} buttonText={data.buttonText} finePrint={data.finePrint} icon={data.icon} />
+                })}
 
                 {/* News Block */}
-                <div className="h-auto w-full">
-
-                    {/* title */}
-                    <div className="h-16 w-full flex justify-start items-end">
-                        <span className="w-10/12 ml-4 mb-2 tracking-wider text-xl text-gray-600 font-bold">News</span>
-                    </div>
-
-                    {/* New Article 1 Big */}
-                    <div className="h-auto w-full">
-                        {Array.from({length: 2}).map((_, index) => {
-                            return <div key={index} className="h-auto w-full mb-8 flex flex-col justify-center items-center">
-
-                                        <div className="h-auto w-11/12 rounded-lg">
-                                            <div className="h-48 bg-blue-300 rounded-lg"></div>
-                                        </div>
-
-                                        <div className="h-11 w-11/12 flex justify-start items-center">
-                                            <div className="mr-1 flex justify-center items-center"><i className='bx bx-plus-medical text-red-600 text-2xl' ></i></div>
-                                            <div className="text-gray-700 font-light text-sm">03/27/26</div>
-                                        </div>
-
-                                        <div className="h-auto w-11/12 text-gray-800 font-semibold text-base tracking-wide line-clamp-2">Get ready for some wondrous new content for Super Mario Bros. Wonder—exclusive to Nintendo Switch 2!</div>
-
-                                        <div className="h-auto w-11/12 mt-2 text-gray-800 line-clamp-2 text-sm font-light">The Super Mario Bros.™ Wonder – Nintendo Switch™ 2 Edition + Meetup in Bellabel Park game is out now and brings a bouquet of new experiences to the Flower Kingdom. Nintendo Switch 2 players will be able to check out Bellabel Park and visit the new a…</div>
-
-                                        <div className="h-auto w-11/12 mt-1">
-                                            <span className="border-b-2 border-red-600 pb-0.5 text-red-600 text-base tracking-wider font-semibold">Read More</span>
-                                        </div>
-
-                                    </div>
-                        })}
-                    </div>
-
-                    {/* new articles titles 2x2 */}
-                    <div className="h-auto w-full flex justify-center items-center">
-
-                        <div className="h-full w-11/12 flex flex-wrap justify-between">
-                            {Array.from({length: 4}).map((_, index) => {
-                                return <div key={index} className="h-auto w-40 mb-6">
-
-                                            <div className="border border-gray-200 h-24 w-full bg-red-600 rounded-lg"></div>
-
-                                            <div className="h-auto w-full mt-2 flex">
-                                                <div className="flex justify-center items-center"><i className='bx bxs-square text-red-600 text-2xl' ></i></div>
-                                                <div className="h-auto w-auto ml-1 flex justify-center items-center text-gray-700 text-sm font-light">03/26/26</div>
-                                            </div>
-
-                                            <div className="h-auto w-full mt-2 line-clamp-3 text-sm text-gray-700 font-bold">Here’s the latest Nintendo Switch Online news from March</div>
-
-                                            <div className="mt-2">
-                                                <span className="border-b-2 border-red-600 h-auto w-auto text-red-600 font-bold tracking-wide">Read More</span>
-                                            </div>
-
-                                        </div>
-                            })}
-                        </div>
-
-                    </div>
-
-                    {/* See all news articles BUTTON */}
-                    <div className="border-b border-gray-300 h-24 w-full flex justify-center items-start">
-                        <div className="h-12 w-11/12 mt-2 flex justify-center items-center bg-red-600 rounded-md">
-                            <div className="mr-4 flex justify-center items-center"><i className='bx bxs-message text-xl text-white' ></i></div>
-                            <div className="text-white text-base tracking-wider font-semibold">See all news articles</div>
-                        </div>
-                    </div>
-
-
-                </div>
+                <NewsSection />
 
                 {/* Characters Block */}
-                <div className="border-b border-gray-300 h-auto w-full flex flex-col justify-start items-center">
-
-                    {/* title */}
-                    <div className="h-16 w-11/12 flex justify-start items-end">
-                        <span className="w-full mb-2 tracking-wider text-xl text-gray-600 font-bold">Characters</span>
-                    </div>
-
-                    {/* tiles */}
-                    <div className="h-auto w-11/12 flex flex-wrap justify-between items-center">
-                        {Array.from({length: 8}).map((_, index) => {
-                            return <div key={index} className="h-auto w-40 mb-6">
-                                        <div className="border h-40 w-40 bg-blue-300 rounded-lg"></div>
-                                        <div className="min-h-8 w-full my-1 flex justify-star items-center text-xl font-bold text-gray-600 break-word"> Super Mario</div>
-                                    </div>
-                        })}
-                    </div>
-                    
-                </div>
+                <CharactersSection data={charactersSectionData} />
 
                 {/* Digital Best Sellers */}
                 {Array.from({length: 2}).map((_, index) => {

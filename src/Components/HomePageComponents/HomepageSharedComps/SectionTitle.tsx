@@ -8,8 +8,8 @@ function SectionTitle({ title }: SectionTitleProp){
 
     return(
         <>
-            <div className="h-16 w-full flex justify-start items-end">
-                <span className="ml-4 mb-2 tracking-wider text-xl text-gray-600 font-bold">{title || "Featured"}</span>
+            <div className="min-h-18 w-full flex justify-start items-center">
+                <div className="w-11/12 ml-4 mt-7 mb-4 tracking-wider text-xl text-gray-600 font-bold">{title || "Red Button Block"}</div>
             </div>
         </>
     )

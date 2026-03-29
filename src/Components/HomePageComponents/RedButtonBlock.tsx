@@ -1,24 +1,22 @@
-
-
+import SectionTitle from "./HomepageSharedComps/SectionTitle";
+import RedClickButton from "./RedButtonBlockComps/RedClickButton";
 
 type RedButtonBlockProp = {
     title: string;
     description: string;
     buttonText: string;
     finePrint: string;
+    icon: string
 }
 
-function RedButtonBlock({ title, description, buttonText, finePrint }: RedButtonBlockProp){
+function RedButtonBlock(data : RedButtonBlockProp){
 
     return(
         <>
-            {/* <div className="border-2 border-blue-600 h-auto w-full pb-6"> */}
             <div className="border-b border-gray-300 h-auto w-full pb-6">
 
                 {/* title */}
-                <div className="min-h-18 w-full flex justify-start items-center">
-                    <div className="w-11/12 ml-4 mt-7 mb-4 tracking-wider text-xl text-gray-600 font-bold">{title || "Red Button Block"}</div>
-                </div>
+                <SectionTitle title={data.title} />
 
                 {/* nintendo today image */}
                 <div className="h-auto w-full flex justify-center items-start">
@@ -33,18 +31,16 @@ function RedButtonBlock({ title, description, buttonText, finePrint }: RedButton
 
                 {/* Description */}
                 <div className="h-auto w-full flex justify-center items-center">
-                    <span className="h-auto w-11/12 my-6 text-[17px] font-bold text-gray-700 tracking-wider">{description || "Your movie companion: Nintendo Today!"}</span>
+                    <span className="h-auto w-11/12 my-6 text-[17px] font-bold text-gray-700 tracking-wider">{data.description || "Your movie companion: Nintendo Today!"}</span>
                 </div>
 
                 {/* Button Text */}
-                <div className="h-auto w-full flex justify-center items-center">
-                    <div className="h-12 w-11/12 flex justify-center items-center bg-red-600 text-white font-semibold text-base tracking-wider rounded-md">{buttonText || "Learn More"}</div>
-                </div> 
+                <RedClickButton buttonText={data.buttonText} icon={data.icon} />
 
                 {/* Fine Print */}
                 <div className="h-auto w-full mt-4 flex justify-center">
                     <div className="w-11/12 text-[10px] text-gray-700 font-light">
-                        {finePrint || ""}
+                        {data.finePrint || ""}
                     </div>
                 </div>
 
