@@ -12,6 +12,7 @@ import RedButtonBlock from "../Components/HomePageComponents/RedButtonBlock";
 import NewsSection from "../Components/HomePageComponents/NewsSection";
 import CharactersSection from "../Components/HomePageComponents/CharactersSection";
 import DigitalsSection from "../Components/HomePageComponents/DigitalsSection";
+import SectionTitle from "../Components/HomePageComponents/HomepageSharedComps/SectionTitle";
 
 //  types
 export type RedButtonBlockType = {
@@ -30,6 +31,11 @@ type NavData = {
     nav: string[];
 }
 
+type NavMenuTabType = {
+    title: string;
+    icon: string;
+}
+
 function DashboardPage(){
     const redButtonBlockData: RedButtonBlockType[] = [
         {title: "Nintendo Today!", description: "Your movie companion: Nintendo Today!", buttonText: "Learn more", finePrint: "Nintendo Account, compatible smart device and persistent internet connection required. Data charges may apply. Requires iOS 16.0 or later. Requires Android 10.0 or later.", icon: "" },
@@ -43,15 +49,28 @@ function DashboardPage(){
     const navIcons: NavData = {
         nav: ['bx bxs-coin-stack','bx bxs-heart', 'bx bx-search', 'bx bxs-cart', 'bx bxl-reddit']
     }
+    const NavMenuTabData: NavMenuTabType[] = [
+        {title: "Nintendo Switch 2", icon: 'bx bxs-square'},
+        {title: "Nintendo Switch", icon: 'bx bxs-square'},
+        {title: "Games", icon: 'bx bx-plus-medical'},
+        {title: "Nintendo Switch Online", icon: 'bx bxs-message-detail'},
+        {title: "News and events", icon: 'bx bxs-star'},
+        {title: "Play Nintendo", icon: 'bx bxs-square'},
+        {title: "My Nintendo", icon: 'bx bxs-square'},
+        {title: "Apps", icon: 'bx bx-mobile'},
+    ]
 
-    useEffect(() => {
-        async function getPlatform(){
-            const data = await fetchPlatforms();
-            return data.results;
+    // useEffect(() => {
+    //     async function getPlatform(){
+    //         const data = await fetchPlatforms();
+    //         return data.results;
 
-        };
-        // getPlatform();
-    }, [])
+    //     };
+    //     // getPlatform();
+    // }, [])
+
+    // nav Click function
+
 
     return(
         <>
@@ -76,7 +95,7 @@ function DashboardPage(){
 
                 {/* <div className="border h-auto w-auto bg-blue-300 opacity-0"></div> */}
 
-                <div className="fixed bottom-0 h-auto w-full flex flex-col justify-center items-center ">
+                <div className="fixed inset-0 h-full w-full flex flex-col justify-center items-center bg-black/50">
 
                     <div className="absolute bottom-12 h-[740px] w-[375px] bg-gray-100 rounded-t-2xl overflow-y-auto">
                         
@@ -106,13 +125,43 @@ function DashboardPage(){
                         </div>
 
                         {/* Pages */}
-                        {/* figure out h for this div left of here */}
-                        <div className="border h-[800px] w-full mt-4 text-red-600"></div>
+                        <div className="h-auto w-full mt-4 flex justify-center items-center">
+
+                            <div className="h-auto w-11/12">
+                                <div className="h-14 w-full mb-2 flex justify-start items-center bg-red-600 shadow rounded-lg">
+                                    <div className="ml-4 flex justify-center items-center"><i className='bx bx-home-circle text-2xl text-white' ></i></div>
+                                    <div className="ml-4 flex justify-center items-center text-base font-bold text-white tracking-wider">Home</div>
+                                </div>
+
+                                {NavMenuTabData.map((section, index) => {
+                                    return <div key={index} className="border border-gray-300 h-14 w-full mb-2 flex justify-start items-center bg-white shadow rounded-lg">
+                                                <div className="ml-4 flex justify-center items-center"><i className={`${section.icon} text-2xl text-red-600`} ></i></div>
+                                                <div className="ml-4 flex justify-center items-center text-base font-bold text-zinc-700 tracking-wider">{section.title}</div>
+                                            </div>
+                                })}
+                            </div>
+                        </div>
+
+                        {/* Meet the Characters */}
+                        <div className="h-auto w-full flex flex-col items-center mb-16">
+
+                            <SectionTitle title="Meet the Characters"/>
+
+                            <div className="h-auto w-11/12 flex flex-wrap justify-between">
+                                {charactersSectionData.characters.map((character, index) => {
+                                    return <div key={index} className="border border-gray-300 h-18 w-40 mb-3 flex justify-center items-center bg-white shadow-sm rounded-md">
+                                        <div className="h-[28px] w-[28px] mx-1 flex justify-center items-center bg-blue-300 rounded shrink-0"></div>
+                                        <div className="h-[28px] max-w-32 flex justify-center items-center text-zinc-700 font-semibold text-sm">{character}</div>
+                                    </div>
+                                })}
+                            </div>
+                            
+                        </div>
 
                     </div>
 
                     {/* Nav Icons */}
-                    <div className="relative border border-zinc-300 h-[60px] w-[375px] mb-4 px-3 flex justify-around items-center bg-white shadow-2xl rounded-full">
+                    <div className="absolute bottom-0 border border-zinc-300 h-[60px] w-[375px] mb-4 px-3 flex justify-around items-center bg-white shadow-2xl rounded-full">
                         {/* {navIcons.nav.map((nav, index) => {
                             return <div key={index} className="border h-full w-1/6 flex justify-center items-center">
                                 <i className={`${nav} text-3xl text-zinc-700`}></i>
