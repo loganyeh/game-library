@@ -1,5 +1,5 @@
+import { useState, useEffect } from "react";
 import { fetchPlatforms } from "../API/api";
-import { useEffect } from "react";
 
 // SHELL comps
 import Header from "../Components/Shell/Header";
@@ -15,7 +15,6 @@ import DigitalsSection from "../Components/HomePageComponents/DigitalsSection";
 import SectionTitle from "../Components/HomePageComponents/HomepageSharedComps/SectionTitle";
 
 import NavBar from "../Components/HomePageComponents/NavBar";
-import NavBarFix from "../Components/NavBarFix";
 
 //  types
 export type RedButtonBlockType = {
@@ -25,15 +24,12 @@ export type RedButtonBlockType = {
     finePrint: string;
     icon: string;
 }
-
 export type CharactersData = {
    characters: string[];
 };
-
 type NavData = {
     nav: string[];
 }
-
 type NavMenuTabType = {
     title: string;
     icon: string;
@@ -62,18 +58,6 @@ function DashboardPage(){
         {title: "My Nintendo", icon: 'bx bxs-square'},
         {title: "Apps", icon: 'bx bx-mobile'},
     ]
-
-    // useEffect(() => {
-    //     async function getPlatform(){
-    //         const data = await fetchPlatforms();
-    //         return data.results;
-
-    //     };
-    //     // getPlatform();
-    // }, [])
-
-    // nav Click function
-
 
     return(
         <>

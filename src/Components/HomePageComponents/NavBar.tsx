@@ -62,7 +62,7 @@ function NavBar({ boolean }: NavBarProp){
         <>
             <div className={`fixed inset-0 h-auto w-full flex flex-col justify-center items-center ${isMenuClick ? "bg-black/50" : ""}`}>
 
-                <div className={`${isMenuClick ? "translate-y-0" : "translate-y-full"} transform transition-transform duration-700 ease-in-out absolute bottom-12 h-[740px] w-[375px] bg-gray-100 rounded-t-2xl overflow-y-auto overflow-y-hidden`}>
+                <div className={`${isMenuClick ? "translate-y-0" : "translate-y-full"} transform transition-transform duration-700 ease-in-out absolute bottom-12 h-[740px] w-[375px] bg-gray-100 rounded-t-2xl overflow-y-auto`}>
                     
                     {/* Nav Header */}
                     <div className="sticky top-0 h-16 w-full flex justify-center items-center bg-red-600 rounded-t-2xl">
