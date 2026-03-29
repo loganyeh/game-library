@@ -74,9 +74,44 @@ function DashboardPage(){
                 {/* Digital Best Sellers */}
                 <DigitalsSection />
 
-                <div className="fixed bottom-0 h-24 w-full flex justify-center items-center">
+                {/* <div className="border h-auto w-auto bg-blue-300 opacity-0"></div> */}
 
-                    <div className="border border-zinc-300 h-[60px] w-[375px] px-3 flex justify-around items-center bg-white shadow-2xl rounded-full">
+                <div className="fixed bottom-0 h-auto w-full flex flex-col justify-center items-center ">
+
+                    <div className="absolute bottom-12 h-[740px] w-[375px] bg-gray-100 rounded-t-2xl overflow-y-auto">
+                        
+                        {/* Nav Header */}
+                        <div className="relative h-16 w-full flex justify-center items-center bg-red-600 rounded-t-2xl">
+                            <div className="border-4 border-white h-8 w-auto px-2 flex justify-center items-center tracking-widest font-semibold text-white rounded-full">Nintendo</div>
+                            <div className="absolute right-3 h-[28px] w-[28px] flex justify-center items-center bg-white rounded-full"><i className='bx bx-x text-[26px] text-red-600'></i></div>
+                        </div>
+
+                        {/* Nav Tabs */}
+                        <div className="h-24 w-full flex items-end bg-white">
+
+                            <div className="border-t border-r border-gray-300 h-22 w-1/3 flex flex-col justify-center items-center bg-gray-100 rounded-t-2xl">
+                                <div className="flex justify-center items-center"><i className='bx bx-compass text-3xl text-red-600' ></i></div>
+                                <span className="font-bold text-sm text-red-600 tracking-wider">Explore</span>
+                            </div>
+
+                            <div className="border-b border-gray-300 h-22 w-1/3 flex flex-col justify-center items-center">
+                                <div className="flex justify-center items-center"><i className='bx bxs-shopping-bag text-3xl text-red-600' ></i></div>
+                                <span className="font-bold text-sm text-black tracking-wider">Shop</span>
+                            </div>
+
+                            <div className="border-b border-gray-300 h-22 w-1/3 flex flex-col justify-center items-center">
+                                <div className="flex justify-center items-center"><i className='bx bxs-shield-alt-2 text-3xl text-red-600' ></i></div>
+                                <span className="font-bold text-sm text-black tracking-wider">Support</span>
+                            </div>
+                        </div>
+
+                        {/* Pages */}
+                        <div className="border h-[800px] w-full mt-4 text-red-600"></div>
+
+                    </div>
+
+                    {/* Nav Icons */}
+                    <div className="relative border border-zinc-300 h-[60px] w-[375px] mb-4 px-3 flex justify-around items-center bg-white shadow-2xl rounded-full">
                         {/* {navIcons.nav.map((nav, index) => {
                             return <div key={index} className="border h-full w-1/6 flex justify-center items-center">
                                 <i className={`${nav} text-3xl text-zinc-700`}></i>
@@ -92,6 +127,7 @@ function DashboardPage(){
                         <div className="h-full w-1/6 flex justify-center items-center shrink-0"><i className={`bx bxs-user text-3xl text-zinc-700`}></i></div>
 
                     </div>
+
 
                 </div>
 
