@@ -22,6 +22,9 @@ function NavBar({ boolean }: NavBarProp){
     const [isExplore, setIsExplore] = useState(true);
     const [isShop, setIsShop] = useState(false);
     const [isSupport, setIsSupport] = useState(false);
+
+    const [isMenuClick, setIsMenuClick] = useState(false);
+
     const ExploreData: NavMenuTabType[] = [
         {title: "Nintendo Switch 2", icon: 'bx bxs-square'},
         {title: "Nintendo Switch", icon: 'bx bxs-square'},
@@ -57,14 +60,16 @@ function NavBar({ boolean }: NavBarProp){
 
     return(
         <>
-            <div className={`${boolean ? "" : "hidden"} fixed inset-0 h-full w-full flex flex-col justify-center items-center bg-black/50`}>
+            <div className={`fixed inset-0 h-auto w-full flex flex-col justify-center items-center ${isMenuClick ? "bg-black/50" : ""}`}>
 
-                <div className="absolute bottom-12 h-[740px] w-[375px] bg-gray-100 rounded-t-2xl overflow-y-auto">
+                <div className={`${isMenuClick ? "translate-y-0" : "translate-y-full"} transform transition-transform duration-700 ease-in-out absolute bottom-12 h-[740px] w-[375px] bg-gray-100 rounded-t-2xl overflow-y-auto overflow-y-hidden`}>
                     
                     {/* Nav Header */}
                     <div className="sticky top-0 h-16 w-full flex justify-center items-center bg-red-600 rounded-t-2xl">
                         <div className="border-4 border-white h-8 w-auto px-2 flex justify-center items-center tracking-widest font-semibold text-white rounded-full">Nintendo</div>
-                        <div className="absolute right-3 h-[28px] w-[28px] flex justify-center items-center bg-white rounded-full"><i className='bx bx-x text-[26px] text-red-600'></i></div>
+                        <div onClick={() => {
+                            setIsMenuClick(false);
+                        }} className="absolute right-3 h-[28px] w-[28px] flex justify-center items-center bg-white rounded-full"><i className='bx bx-x text-[26px] text-red-600'></i></div>
                     </div>
 
                     {/* Nav Tabs */}
@@ -106,13 +111,9 @@ function NavBar({ boolean }: NavBarProp){
 
                 {/* Nav Icons */}
                 <div className="absolute bottom-0 border border-zinc-300 h-[60px] w-[375px] mb-4 px-3 flex justify-around items-center bg-white shadow-2xl rounded-full">
-                    {/* {navIcons.nav.map((nav, index) => {
-                        return <div key={index} className="border h-full w-1/6 flex justify-center items-center">
-                            <i className={`${nav} text-3xl text-zinc-700`}></i>
-                        </div>
-                    })} */}
-                    {/* ['bx bxs-coin-stack','bx bxs-heart', 'bx bx-search', 'bx bxs-cart', 'bx bxl-reddit'] */}
-                    <div className="h-full w-1/6 flex justify-center items-center shrink-0"><i className={`bx bx-menu text-4xl text-zinc-700`}></i></div>
+                    <div onClick={() => {setIsMenuClick(!isMenuClick)}} className={`h-full w-1/6 flex justify-center items-center shrink-0`}>
+                        <div className={`flex justify-center items-center h-6 w-6 ${isMenuClick ? "bg-zinc-700 rounded-full" : ""}`}><i className={`bx ${isMenuClick ? "bx-x text-3xl text-white" : "bx-menu text-4xl text-zinc-700"} `}></i></div>
+                    </div>
                     <div className="h-full w-1/6 flex justify-center items-center shrink-0"><i className={`bx bxs-heart text-3xl text-zinc-700`}></i></div>
 
                     <div className="h-16 w-16 mb-4 flex justify-center items-center bg-red-600 rounded-full shrink-0"><i className={`bx bx-search text-4xl text-white`}></i></div>
@@ -123,7 +124,7 @@ function NavBar({ boolean }: NavBarProp){
                 </div>
 
 
-                </div>
+            </div>
         
         </>
     )

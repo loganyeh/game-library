@@ -15,6 +15,7 @@ import DigitalsSection from "../Components/HomePageComponents/DigitalsSection";
 import SectionTitle from "../Components/HomePageComponents/HomepageSharedComps/SectionTitle";
 
 import NavBar from "../Components/HomePageComponents/NavBar";
+import NavBarFix from "../Components/NavBarFix";
 
 //  types
 export type RedButtonBlockType = {
@@ -98,6 +99,7 @@ function DashboardPage(){
                 {/* <div className="border h-auto w-auto bg-blue-300 opacity-0"></div> */}
 
                 <NavBar boolean={false} />
+                {/* <NavBarFix /> */}
 
                 <Footer />
             </div>
