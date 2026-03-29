@@ -22,7 +22,7 @@ type RedButtonBlockType = {
     icon: string;
 }
 
-type charactersSectionDataType = {
+export type CharactersData = {
    characters: string[];
 };
 
@@ -34,7 +34,7 @@ function DashboardPage(){
         {title: "Nintendo Switch Online + Expansion Pack", description: "Play online, discover the classics, and more", buttonText: "Learn more", finePrint: "*Full version of game required to use the content for that game. Sold separately. For details visit https://support.nintendo.com/switch2/upgradepack. Terms apply. https://www.nintendo.com/us/purchase-terms/", icon: "" },
     ]
 
-    const charactersSectionData: charactersSectionDataType = {
+    const charactersSectionData: CharactersData = {
         characters: ["Super Mario", "The Legend of Zelda", "Splatoon", "Kirby", "Pikmin", "Animal Crossing", "Metroid", "Pokemon"],
     };
 
@@ -76,7 +76,7 @@ function DashboardPage(){
                 <NewsSection />
 
                 {/* Characters Block */}
-                <CharactersSection data={charactersSectionData} />
+                <CharactersSection characters={charactersSectionData} />
 
                 {/* Digital Best Sellers */}
                 {Array.from({length: 2}).map((_, index) => {
