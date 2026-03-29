@@ -92,14 +92,10 @@ function DashboardPage(){
                 <NewsSection />
 
                 <CharactersSection characters={charactersSectionData} />
-
-                {/* Digital Best Sellers */}
+                
                 <DigitalsSection />
 
-                {/* <div className="border h-auto w-auto bg-blue-300 opacity-0"></div> */}
-
-                <NavBar boolean={false} />
-                {/* <NavBarFix /> */}
+                {/* <NavBar boolean={false} /> */}
 
                 <Footer />
             </div>
