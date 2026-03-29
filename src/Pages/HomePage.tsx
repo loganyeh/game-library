@@ -97,7 +97,7 @@ function DashboardPage(){
 
                 {/* <div className="border h-auto w-auto bg-blue-300 opacity-0"></div> */}
 
-                <NavBar />
+                <NavBar boolean={false} />
 
                 <Footer />
             </div>
