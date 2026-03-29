@@ -14,7 +14,7 @@ import CharactersSection from "../Components/HomePageComponents/CharactersSectio
 import DigitalsSection from "../Components/HomePageComponents/DigitalsSection";
 
 //  types
-type RedButtonBlockType = {
+export type RedButtonBlockType = {
     title: string;
     description: string;
     buttonText: string;
@@ -69,13 +69,11 @@ function DashboardPage(){
                 <FeaturedSection />
 
                 {redButtonBlockData.map((data, index) => {
-                    return <RedButtonBlock key={index} title={data.title} description={data.description} buttonText={data.buttonText} finePrint={data.finePrint} icon={data.icon} />
+                    return <RedButtonBlock key={index} data={data} />
                 })}
 
-                {/* News Block */}
                 <NewsSection />
 
-                {/* Characters Block */}
                 <CharactersSection characters={charactersSectionData} />
 
                 {/* Digital Best Sellers */}

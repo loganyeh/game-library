@@ -1,15 +1,13 @@
 import SectionTitle from "./HomepageSharedComps/SectionTitle";
 import RedClickButton from "./RedButtonBlockComps/RedClickButton";
 
+import type { RedButtonBlockType } from "../../Pages/HomePage";
+
 type RedButtonBlockProp = {
-    title: string;
-    description: string;
-    buttonText: string;
-    finePrint: string;
-    icon: string
+    data: RedButtonBlockType;
 }
 
-function RedButtonBlock(data : RedButtonBlockProp){
+function RedButtonBlock({ data }: RedButtonBlockProp){
 
     return(
         <>
@@ -22,7 +20,7 @@ function RedButtonBlock(data : RedButtonBlockProp){
                 <div className="h-auto w-full flex justify-center items-start">
                     <div className="h-40 w-11/12 bg-blue-300 rounded-lg">
                         <div className="h-32 bg-blue-300 rounded-t-lg"></div>
-                        {/* <div className="h-8 bg-red-600 flex justify-center items-center rounded-b-lg">
+                        {/* <div className={` h-8 bg-red-600 flex justify-center items-center rounded-b-lg`}>
                             <div className="h-5 w-5 mr-2 flex justify-center items-center bg-yellow-400 rounded-sm"><i className='bx bx-question-mark text-xl text-white' ></i></div>
                             <div className="text-white text-sm font-medium tracking-wider">Red Button Block</div>
                         </div> */}
