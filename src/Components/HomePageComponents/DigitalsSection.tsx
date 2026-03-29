@@ -1,23 +1,22 @@
-
+import SectionTitle from "./HomepageSharedComps/SectionTitle";
 
 function DigitalsSection(){
+    const digitalSectionTitles = ["best sellers", "new releases"];
 
     return(
         <>
-            {Array.from({length: 2}).map((_, index) => {
+            {digitalSectionTitles.map((title, index) => {
                 return <div key={index} className="h-auto w-full">
-                            <div className="h-28 w-full flex justify-center">
-                                <div className="h-28 w-11/12 flex flex-col justify-end items-start">
-                                    <span className="w-full mb-2 tracking-wider text-xl text-gray-600 font-bold">Digital Best Sellers</span>
-                                    <div className="border-b-2 border-red-600 mb-3">
-                                        <span className="text-sm text-red-600 font-semibold tracking-wide">See full list</span>
-                                    </div>
+                            <div className="h-auto w-full flex flex-col justify-start items-center">
+                                <SectionTitle title={`Digital ${title}`} />
+                                <div className="h-auto w-full">
+                                    <span className="border-b-3 border-red-600 h-full ml-4 font-semibold text-red-600 text-sm tracking-widr">See full list</span>
                                 </div>
                             </div>
                             
-                            <div className="h-auto w-auto mt-2 pl-5 pb-12 flex overflow-x-auto scroll-smooth">
-                                {Array.from({length: 5}).map((_, index) => {
-                                    return <div key={index} className="border border-gray-600 min-h-96 w-64 mx-4 rounded-lg shrink-0">
+                            <div className="h-auto w-auto mt-4 pl-5 pb-8 flex overflow-x-auto scroll-smooth">
+                                {Array.from({length: 10}).map((_, index) => {
+                                    return <div key={index} className="border border-gray-600 min-h-96 w-56 mx-4 rounded-lg shrink-0">
                                                 <div className="h-5 w-full bg-red-600 flex justify-center items-center text-white font-bold rounded-t-lg">2</div>
 
                                                 <div className="h-52 w-full bg-blue-300"></div>
@@ -45,7 +44,7 @@ function DigitalsSection(){
                                             </div>
                                 })}
 
-                                <div className="h-96 w-40 flex items-end shrink-0">
+                                <div className="h-auto w-40 flex items-end shrink-0">
                                     <div className="h-[364px] w-full flex justify-center items-center bg-red-600 text-white font-semibold text-base tracking-wide rounded-md">See full list</div>
                                 </div>
 
