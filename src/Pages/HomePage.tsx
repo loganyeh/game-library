@@ -81,7 +81,7 @@ function DashboardPage(){
                     <div className="absolute bottom-12 h-[740px] w-[375px] bg-gray-100 rounded-t-2xl overflow-y-auto">
                         
                         {/* Nav Header */}
-                        <div className="relative h-16 w-full flex justify-center items-center bg-red-600 rounded-t-2xl">
+                        <div className="sticky top-0 h-16 w-full flex justify-center items-center bg-red-600 rounded-t-2xl">
                             <div className="border-4 border-white h-8 w-auto px-2 flex justify-center items-center tracking-widest font-semibold text-white rounded-full">Nintendo</div>
                             <div className="absolute right-3 h-[28px] w-[28px] flex justify-center items-center bg-white rounded-full"><i className='bx bx-x text-[26px] text-red-600'></i></div>
                         </div>
@@ -106,6 +106,7 @@ function DashboardPage(){
                         </div>
 
                         {/* Pages */}
+                        {/* figure out h for this div left of here */}
                         <div className="border h-[800px] w-full mt-4 text-red-600"></div>
 
                     </div>
