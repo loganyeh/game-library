@@ -1,4 +1,4 @@
-
+import { fetchShowcase } from "../../API/HomepageAPI";
 
 function ShowcaseSlideshow(){
 

@@ -1,10 +1,7 @@
 import { useState } from "react";
 
-import SectionTitle from "./HomepageSharedComps/SectionTitle";
-
 import type { CharactersData } from "../../Pages/HomePage";
 import MenuNavTabs from "./NavBarComps/NavPage";
-import { isParameter } from "typescript";
 
 type NavData = {
     nav: string[];

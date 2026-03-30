@@ -9,7 +9,7 @@ type NavProps = {
     characters?: CharactersData;
 }
 
-function NavPage({ tabName, pageBoolean, data, characters}: NavProps){
+function MenuNavTabs({ tabName, pageBoolean, data, characters}: NavProps){
 
     return(
         <>
@@ -51,4 +51,4 @@ function NavPage({ tabName, pageBoolean, data, characters}: NavProps){
     )
 }
 
-export default NavPage;
+export default MenuNavTabs;
