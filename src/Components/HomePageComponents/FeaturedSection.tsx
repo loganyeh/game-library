@@ -6,7 +6,6 @@ import type { FeatureDM } from "../../API/HomepageAPI";
 
 function FeaturedSection(){
     const [loading, setLoading] = useState(true);
-    
     const [featureData, setFeatureData] = useState<FeatureDM[]>([]);
 
     useEffect(() => {
@@ -21,6 +20,8 @@ function FeaturedSection(){
 
         getFeature();
     }, []);
+
+    // console.log(featureData[0]?.platforms[0]?.platform.name);
 
     return(
         <>
