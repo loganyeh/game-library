@@ -8,10 +8,6 @@ export type NavMenuTabType = {
     icon: string;
 }
 
-type NavBarProp = {
-    boolean?: boolean;
-}
-
 function NavBar(){
     const [isExplore, setIsExplore] = useState(true);
     const [isShop, setIsShop] = useState(false);

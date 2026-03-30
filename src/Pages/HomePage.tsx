@@ -21,13 +21,6 @@ export type RedButtonBlockType = {
 export type CharactersData = {
    characters: string[];
 };
-type NavData = {
-    nav: string[];
-}
-type NavMenuTabType = {
-    title: string;
-    icon: string;
-}
 
 function DashboardPage(){
     const redButtonBlockData: RedButtonBlockType[] = [
