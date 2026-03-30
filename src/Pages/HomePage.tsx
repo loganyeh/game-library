@@ -1,6 +1,3 @@
-import { useState, useEffect } from "react";
-import { fetchPlatforms } from "../API/api";
-
 // SHELL comps
 import Header from "../Components/Shell/Header";
 import Footer from "../Components/Shell/Footer";
@@ -12,9 +9,6 @@ import RedButtonBlock from "../Components/HomePageComponents/RedButtonBlock";
 import NewsSection from "../Components/HomePageComponents/NewsSection";
 import CharactersSection from "../Components/HomePageComponents/CharactersSection";
 import DigitalsSection from "../Components/HomePageComponents/DigitalsSection";
-import SectionTitle from "../Components/HomePageComponents/HomepageSharedComps/SectionTitle";
-
-import NavBar from "../Components/HomePageComponents/NavBar";
 
 //  types
 export type RedButtonBlockType = {
@@ -45,19 +39,6 @@ function DashboardPage(){
     const charactersSectionData: CharactersData = {
         characters: ["Super Mario", "The Legend of Zelda", "Splatoon", "Kirby", "Pikmin", "Animal Crossing", "Metroid", "Pokemon"],
     };
-    const navIcons: NavData = {
-        nav: ['bx bxs-coin-stack','bx bxs-heart', 'bx bx-search', 'bx bxs-cart', 'bx bxl-reddit']
-    }
-    const NavMenuTabData: NavMenuTabType[] = [
-        {title: "Nintendo Switch 2", icon: 'bx bxs-square'},
-        {title: "Nintendo Switch", icon: 'bx bxs-square'},
-        {title: "Games", icon: 'bx bx-plus-medical'},
-        {title: "Nintendo Switch Online", icon: 'bx bxs-message-detail'},
-        {title: "News and events", icon: 'bx bxs-star'},
-        {title: "Play Nintendo", icon: 'bx bxs-square'},
-        {title: "My Nintendo", icon: 'bx bxs-square'},
-        {title: "Apps", icon: 'bx bx-mobile'},
-    ]
 
     return(
         <>
