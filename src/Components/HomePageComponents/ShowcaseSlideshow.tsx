@@ -20,9 +20,6 @@ function ShowcaseSlideshow(){
         getShowcase();
     }, []);
 
-    // console.log(showcaseData.slice(0, 10));
-    // console.log(showcaseData[8]?.name);
-
     return(
         <>
             <div className="h-auto w-full">
@@ -36,11 +33,6 @@ function ShowcaseSlideshow(){
                                 
                             </div>
                         }))
-                        // (
-                        //     <div className={`h-full w-full bg-center bg-cover`} style={{backgroundImage: `url(${showcaseData[0].background_image})`}}>
-                                
-                        //     </div>
-                        // )
                     }
                 </div>
 
