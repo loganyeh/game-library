@@ -21,7 +21,7 @@ function ShowcaseSlideshow(){
     }, []);
 
     // console.log(showcaseData.slice(0, 10));
-    console.log(showcaseData[8]);
+    // console.log(showcaseData[8]?.name);
 
     return(
         <>
