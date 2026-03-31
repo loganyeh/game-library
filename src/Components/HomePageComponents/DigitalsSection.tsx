@@ -10,7 +10,7 @@ function DigitalsSection(){
                             <div className="h-auto w-full flex flex-col justify-start items-center">
                                 <SectionTitle title={`Digital ${title}`} />
                                 <div className="h-auto w-full">
-                                    <span className="border-b-3 border-red-600 h-full ml-4 font-semibold text-red-600 text-sm tracking-widr">See full list</span>
+                                    <span className="border-b-3 border-red-600 h-full ml-4 font-semibold text-red-600 text-sm tracking-wide">See full list</span>
                                 </div>
                             </div>
                             
