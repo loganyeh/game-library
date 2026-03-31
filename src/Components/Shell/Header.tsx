@@ -5,7 +5,7 @@ function Header(){
     return(
         <>
             {/* Header for Mobile up to MD Breakpoint */}
-            <div className="lg:hidden h-12 w-full flex justify-between items-center bg-red-600">
+            <div className="xl:hidden border-b border-white h-12 w-full flex justify-between items-center bg-red-600">
                 <div className="border-3 border-white h-6 w-auto ml-4 px-1 flex justify-center items-center text-white text-base font-bold rounded-2xl">Nintendo</div>
                 <div className="h-auto w-auto mr-4 flex justify-center items-center text-3xl md:text-2xl">🇺🇸</div>
             </div>
@@ -13,7 +13,7 @@ function Header(){
             {/* ------------------------ */}
 
             {/* Header for LG and above breakpoints */}
-            <div className="hidden lg:flex border bg-white h-[60px] w-full lg:justify-end">
+            <div className="hidden xl:flex border bg-white h-[60px] w-full lg:justify-end">
 
                 {/* Logo */}
                 <div className="h-[60px] w-32 flex justify-center items-center bg-red-600">

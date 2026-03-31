@@ -16,7 +16,7 @@ function NewsSection(){
                         return <div key={index} className="h-auto w-full mb-8 flex flex-col justify-center items-center">
 
                                     <div className="h-auto w-11/12 rounded-lg">
-                                        <div className="h-48 md:h-52 bg-blue-300 rounded-lg"></div>
+                                        <div className="h-48 md:h-52 lg:h-64 bg-blue-300 rounded-lg"></div>
                                     </div>
 
                                     <div className="h-11 md:h-16 w-11/12 flex justify-start items-center">
@@ -39,11 +39,11 @@ function NewsSection(){
                 {/* Small Articles 2x2 */}
                 <div className="h-auto w-full flex justify-center items-center">
 
-                    <div className="h-full w-11/12 md:w-[740px] flex flex-wrap justify-between">
+                    <div className="h-full w-11/12 md:w-[740px] lg:w-[990px] flex flex-wrap justify-between">
                         {Array.from({length: 4}).map((_, index) => {
-                            return <div key={index} className="h-auto w-40 md:w-44 mb-6 md:mb-8">
+                            return <div key={index} className="borderh-auto w-40 md:w-44 lg:w-56 mb-6 md:mb-8">
 
-                                        <div className="border border-gray-200 h-24 md:h-28 w-full bg-red-600 rounded-lg"></div>
+                                        <div className="border border-gray-200 h-24 md:h-28 lg:h-32 w-full bg-red-600 rounded-lg"></div>
 
                                         <div className="h-auto w-full mt-2 md:mt-3 flex">
                                             <div className="flex justify-center items-center"><i className='bx bxs-square text-red-600 text-2xl' ></i></div>
