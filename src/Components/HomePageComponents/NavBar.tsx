@@ -50,11 +50,12 @@ function NavBar(){
 
     return(
         <>
-            <div className={`fixed inset-0 h-auto w-full flex flex-col justify-center items-center ${isMenuClick ? "bg-black/50" : ""}`}>
 
-                <div className={`${isMenuClick ? "translate-y-0" : "translate-y-full"} transform transition-transform duration-700 ease-in-out absolute bottom-12 h-[740px] w-[375px] bg-gray-100 rounded-t-2xl overflow-y-auto`}>
+            {/* <div className={`fixed inset-0 h-auto w-full flex flex-col justify-center items-center ${isMenuClick ? "bg-black/50" : ""}`}> */}
+
+                {/* <div className={`border ${isMenuClick ? "translate-y-0" : "translate-y-full"} transform transition-transform duration-700 ease-in-out absolute left-2 bottom-12 h-[740px] w-[375px] bg-gray-100 rounded-t-2xl overflow-y-auto overflow-hidden`}> */}
+                <div className={`${isMenuClick ? "" : "hidden"} fixed left-2 bottom-12 h-[740px] w-[375px] bg-gray-100 rounded-t-2xl overflow-y-auto overflow-hidden`}>
                     
-                    {/* Nav Header */}
                     <div className="sticky top-0 h-16 w-full flex justify-center items-center bg-red-600 rounded-t-2xl">
                         <div className="border-4 border-white h-8 w-auto px-2 flex justify-center items-center tracking-widest font-semibold text-white rounded-full">Nintendo</div>
                         <div onClick={() => {
@@ -62,7 +63,6 @@ function NavBar(){
                         }} className="absolute right-3 h-[28px] w-[28px] flex justify-center items-center bg-white rounded-full"><i className='bx bx-x text-[26px] text-red-600'></i></div>
                     </div>
 
-                    {/* Nav Tabs */}
                     <div className="h-24 w-full flex items-end bg-white">
                         <div onClick={() => {
                             setIsShop(false);
@@ -92,15 +92,13 @@ function NavBar(){
                         </div>
                     </div>
 
-                    {/* Page Tabs */}
                     <MenuNavTabs tabName="Explore" pageBoolean={isExplore} data={ExploreData} characters={charactersSectionData} />
                     <MenuNavTabs tabName="Shop" pageBoolean={isShop} data={ShopData}  />
                     <MenuNavTabs tabName="Support" pageBoolean={isSupport} data={SupportData}  />
 
                 </div>
 
-                {/* Nav Icons */}
-                <div className="absolute bottom-0 border border-zinc-300 h-[60px] w-[375px] mb-4 px-3 flex justify-around items-center bg-white shadow-2xl rounded-full">
+                <div className="fixed bottom-0 left-2 border border-zinc-300 h-[60px] w-[375px] mb-4 px-3 flex justify-around items-center bg-white shadow-2xl rounded-full">
                     <div onClick={() => {setIsMenuClick(!isMenuClick)}} className={`h-full w-1/6 flex justify-center items-center shrink-0`}>
                         <div className={`flex justify-center items-center h-6 w-6 ${isMenuClick ? "bg-zinc-700 rounded-full" : ""}`}><i className={`bx ${isMenuClick ? "bx-x text-3xl text-white" : "bx-menu text-4xl text-zinc-700"} `}></i></div>
                     </div>
@@ -114,8 +112,7 @@ function NavBar(){
                 </div>
 
 
-            </div>
-        
+            {/* </div> */}
         </>
     )
 }
