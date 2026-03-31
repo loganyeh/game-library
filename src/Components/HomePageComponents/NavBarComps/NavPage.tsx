@@ -1,4 +1,4 @@
-import SectionTitle from "../HomepageSharedComps/SectionTitle";
+import SectionTitle from "../SharedHomepageComps/SectionTitle";
 import type { NavMenuTabType } from "../NavBar";
 import type { CharactersData } from "../../../Pages/HomePage";
 

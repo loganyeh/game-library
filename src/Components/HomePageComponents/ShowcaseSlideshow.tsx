@@ -7,18 +7,18 @@ function ShowcaseSlideshow(){
     const [loading, setLoading] = useState(true);
     const [showcaseData, setShowcaseData] = useState<Game[]>([]);
 
-    useEffect(() => {
-        async function getShowcase(){
-            setLoading(true);
+    // useEffect(() => {
+    //     async function getShowcase(){
+    //         setLoading(true);
 
-            const data = await fetchShowcase();
-            setShowcaseData(data);
+    //         const data = await fetchShowcase();
+    //         setShowcaseData(data);
 
-            setLoading(false);
-        }
+    //         setLoading(false);
+    //     }
 
-        getShowcase();
-    }, []);
+    //     getShowcase();
+    // }, []);
 
     return(
         <>
@@ -40,11 +40,13 @@ function ShowcaseSlideshow(){
                 {/* Slideshow Preview */}
                 <div className="h-20 md:h-36 w-full flex flex-col justify-center items-center">
                     <div className="h-full w-9/12 md:w-5/12 lg:w-4/12 xl:w-3/12 md:pt-6 flex justify-between items-center md:items-start">
-                        <div className="h-8 w-8 flex justify-center items-center bg-red-600 rounded-full"><i className='bx bx-pause text-white text-4xl'></i></div>
+                        <div className="h-12 w-12 flex justify-center items-center">
+                            <div className="h-[36px] w-[36px] flex justify-center items-center bg-red-600 rounded-full"><i className='bx bx-pause text-white text-4xl'></i></div>
+                        </div>
                         {loading ?
                             (Array.from({length: 4}).map((_, index) => {
-                                return <div key={index} className="h-12 w-12 flex justify-center items-center bg-gray-300 rounded-lg">
-                                    <div className="flex justify-center items-center animate-spin"><i className='bx bx-loader-alt'></i></div>
+                                return <div key={index} className="h-12 w-12 flex justify-center items-center bg-blue-300 rounded-lg">
+                                    <div className="flex justify-center items-center"><i className='bx bx-loader-alt'></i></div>
                                 </div>
                             })) 
                             :

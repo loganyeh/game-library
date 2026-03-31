@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import SectionTitle from "./HomepageSharedComps/SectionTitle";
+import SectionTitle from "./SharedHomepageComps/SectionTitle";
 import RedClickButton from "./RedButtonBlockComps/RedClickButton";
 
 import type { RedButtonBlockType } from "../../Pages/HomePage";
@@ -14,23 +14,23 @@ function RedButtonBlock({ data }: RedButtonBlockProp){
     const [loading, setLoading] = useState(true);
     const [redData, setRedData] = useState<RedButtonImg[]>([]);
 
-    useEffect(() => {
-        async function getRedButton(){
-            setLoading(true); 
+    // useEffect(() => {
+    //     async function getRedButton(){
+    //         setLoading(true); 
 
-            const data = await fetchRedButtonImg();
-            setRedData(data);
+    //         const data = await fetchRedButtonImg();
+    //         setRedData(data);
 
-            setLoading(false);
-        }
+    //         setLoading(false);
+    //     }
 
-        getRedButton();
-    }, [])
+    //     getRedButton();
+    // }, [])
 
 
     return(
         <>
-            <div className="border-b border-gray-300 h-auto w-full flex flex-col items-center pb-6">
+            <div className="border border-gray-300 h-auto w-full flex flex-col items-center pb-6">
 
                 {/* title */}
                 <SectionTitle title={data.title} />
@@ -39,8 +39,8 @@ function RedButtonBlock({ data }: RedButtonBlockProp){
                 <div className="h-auto w-full flex justify-center items-start">
                     <div className="h-40 w-11/12 md:w-[740px] lg:w-[990px] rounded-lg">
                         {loading ? 
-                            (<div className="h-full md:w-full flex justify-center items-center bg-gray-300 rounded-lg">
-                                <div className="flex justify-center items-center animate-spin"><i className='bx bx-loader-alt text-2xl'></i></div>
+                            (<div className="h-full md:w-full flex justify-center items-center bg-blue-300 rounded-lg">
+                                <div className="flex justify-center items-center"><i className='bx bx-loader-alt text-2xl'></i></div>
                             </div>)
                             :
                             (<div className="h-full md:w-full w-full bg-gray-300 rounded-lg bg-cover bg-center" style={{ backgroundImage: `url(${redData[Math.ceil(Math.random() * 19)]?.background_image})` }}></div>)
