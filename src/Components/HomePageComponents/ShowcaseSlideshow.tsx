@@ -29,7 +29,8 @@ function ShowcaseSlideshow(){
                         (<div className="flex justify-center items-center animate-spin"><i className='bx bx-loader-alt text-4xl'></i></div>)
                         :
                         (showcaseData.slice(8, 9).map((game, _) => {
-                            return <div key={game.id} className={`h-full w-full bg-center bg-cover`} style={{backgroundImage: `url(${game.background_image})`}}>
+                            // return <div key={game.id} className={`h-full w-full bg-center bg-cover`} style={{backgroundImage: `url(${game.background_image})`}}>
+                            return <div key={game.id} className={`h-full w-full bg-center bg-gray-300`}>
                                 
                             </div>
                         }))
