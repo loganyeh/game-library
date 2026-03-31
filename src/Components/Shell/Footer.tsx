@@ -31,14 +31,14 @@ function Footer(){
                 </div>
 
                 {/* Links */}
-                <div className="h-auto w-full flex flex-col justify-start items-center mt-12">
+                <div className="h-auto w-full flex flex-col md:flex-row md:flex-wrap justify-start items-center md:items-start mt-12">
                     {footerData.map((data, index) => {
-                        return <div key={index} className="border-l border-gray-300 h-auto w-4/5 mb-8 pl-8 flex flex-col">
-                                    <div className="h-10 flex items-center text-lg text-gray-700 font-semibold tracking-wide">{data.title || "About Nintendo"}</div>
+                        return <div key={index} className="border-l border-gray-300 h-auto w-4/5 md:w-1/4 mb-8 pl-8 flex flex-col">
+                                    <div className="h-10 md:h-auto flex items-center text-lg text-zinc-700 font-semibold tracking-wide">{data.title || "About Nintendo"}</div>
                                     
                                     <div className="h-auto flex flex-col mt-2">
                                         {data.links.map((link, index) => {
-                                            return <div key={index} className="h-6 mb-2 flex items-center text-sm text-red-600 font-bold tracking-wide">{link || "Careers"}</div>
+                                            return <div key={index} className="h-6 md:h-auto mb-2 flex items-center text-sm md:text-base text-red-600 font-bold tracking-wide">{link || "Careers"}</div>
                                         })}
                                     </div>
                                 </div>
@@ -47,9 +47,9 @@ function Footer(){
 
                 {/* Social Media Icons */}
                 <div className="h-auto w-full flex justify-center items-center">
-                    <div className="h-auto w-2/3 flex justify-between items-center">
+                    <div className="h-auto w-2/3 md:w-1/3 flex justify-between items-center">
                         {socialMediaIcons.map((icon, index) => {
-                            return <div key={index} className="flex justify-center items-center"><i className={`bx bxl-${icon} text-4xl text-zinc-700`} ></i></div>
+                            return <div key={index} className="flex justify-center items-center"><i className={`bx bxl-${icon} text-4xl md:text-[40px] text-zinc-700`} ></i></div>
                         })}
                     </div>
                 </div>
