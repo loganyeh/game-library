@@ -24,7 +24,7 @@ function ShowcaseSlideshow(){
         <>
             <div className="h-auto w-full">
                 {/* Image Slideshow */}
-                <div className="h-[425px] w-full flex justify-center items-center bg-gray-300">
+                <div className="h-[425px] md:h-[875px] w-full flex justify-center items-center bg-gray-300">
                     {loading ?
                         (<div className="flex justify-center items-center animate-spin"><i className='bx bx-loader-alt text-4xl'></i></div>)
                         :
@@ -37,8 +37,8 @@ function ShowcaseSlideshow(){
                 </div>
 
                 {/* Slideshow Preview */}
-                <div className="h-20 w-full flex flex-col justify-center items-center">
-                    <div className="h-full w-9/12 flex justify-between items-center">
+                <div className="h-20 md:h-36 w-full flex flex-col justify-center items-center">
+                    <div className="h-full w-9/12 md:w-5/12 md:pt-6 flex justify-between items-center md:items-start">
                         <div className="h-8 w-8 flex justify-center items-center bg-red-600 rounded-full"><i className='bx bx-pause text-white text-4xl'></i></div>
                         {loading ?
                             (Array.from({length: 4}).map((_, index) => {

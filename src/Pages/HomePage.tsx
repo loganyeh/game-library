@@ -54,7 +54,7 @@ function DashboardPage(){
                 
                 <DigitalsSection />
 
-                <NavBar />
+                {/* <NavBar /> */}
 
                 <Footer />
             </div>
