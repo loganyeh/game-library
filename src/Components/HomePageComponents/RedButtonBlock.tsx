@@ -37,7 +37,7 @@ function RedButtonBlock({ data }: RedButtonBlockProp){
 
                 {/* nintendo today image */}
                 <div className="h-auto w-full flex justify-center items-start">
-                    <div className="h-40 w-11/12 rounded-lg">
+                    <div className="h-40 w-11/12 md:w-[790px] rounded-lg">
                         {loading ? 
                             (<div className="h-full flex justify-center items-center bg-gray-300 rounded-lg">
                                 <div className="flex justify-center items-center animate-spin"><i className='bx bx-loader-alt text-2xl'></i></div>
@@ -56,7 +56,7 @@ function RedButtonBlock({ data }: RedButtonBlockProp){
 
                 {/* Description */}
                 <div className="h-auto w-full flex justify-center items-center">
-                    <span className="h-auto w-11/12 my-6 text-[17px] font-bold text-gray-700 tracking-wider">{data.description || "Your movie companion: Nintendo Today!"}</span>
+                    <span className="h-auto w-11/12 md:w-[790px] my-6 text-[17px] md:text-xl font-bold text-gray-700 tracking-wider">{data.description || "Your movie companion: Nintendo Today!"}</span>
                 </div>
 
                 {/* Button Text */}
@@ -64,7 +64,7 @@ function RedButtonBlock({ data }: RedButtonBlockProp){
 
                 {/* Fine Print */}
                 <div className="h-auto w-full mt-4 flex justify-center">
-                    <div className="w-11/12 text-[10px] text-gray-700 font-light">
+                    <div className="w-11/12 md:w-[790px] text-[10px] md:text-[12px] text-gray-700 font-light">
                         {data.finePrint || ""}
                     </div>
                 </div>

@@ -25,7 +25,7 @@ function FeaturedSection(){
 
     return(
         <>
-            <div className="border-b border-gray-300 h-auto w-full pb-6">     
+            <div className="border-b border-gray-300 h-auto w-full pb-6 md:pb-16">     
                 {/* title */}
                 <SectionTitle title="Featured"/>
 

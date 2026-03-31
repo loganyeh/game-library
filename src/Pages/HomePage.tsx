@@ -9,7 +9,7 @@ import RedButtonBlock from "../Components/HomePageComponents/RedButtonBlock";
 import NewsSection from "../Components/HomePageComponents/NewsSection";
 import CharactersSection from "../Components/HomePageComponents/CharactersSection";
 import DigitalsSection from "../Components/HomePageComponents/DigitalsSection";
-import NavBar from "../Components/HomePageComponents/NavBar";
+// import NavBar from "../Components/HomePageComponents/NavBar";
 
 //  types
 export type RedButtonBlockType = {
