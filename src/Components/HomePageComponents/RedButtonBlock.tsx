@@ -30,20 +30,20 @@ function RedButtonBlock({ data }: RedButtonBlockProp){
 
     return(
         <>
-            <div className="border-b border-gray-300 h-auto w-full pb-6">
+            <div className="border-b border-gray-300 h-auto w-full flex flex-col items-center pb-6">
 
                 {/* title */}
                 <SectionTitle title={data.title} />
 
                 {/* nintendo today image */}
                 <div className="h-auto w-full flex justify-center items-start">
-                    <div className="h-40 w-11/12 md:w-[790px] rounded-lg">
+                    <div className="h-40 w-11/12 md:w-[740px] rounded-lg">
                         {loading ? 
-                            (<div className="h-full flex justify-center items-center bg-gray-300 rounded-lg">
+                            (<div className="h-full md:w-full flex justify-center items-center bg-gray-300 rounded-lg">
                                 <div className="flex justify-center items-center animate-spin"><i className='bx bx-loader-alt text-2xl'></i></div>
                             </div>)
                             :
-                            (<div className="h-full bg-gray-300 rounded-lg bg-cover bg-center" style={{ backgroundImage: `url(${redData[Math.ceil(Math.random() * 19)]?.background_image})` }}></div>)
+                            (<div className="h-full md:w-full w-full bg-gray-300 rounded-lg bg-cover bg-center" style={{ backgroundImage: `url(${redData[Math.ceil(Math.random() * 19)]?.background_image})` }}></div>)
                         }
                         {/* <div className="h-full bg-gray-300 rounded-t-lg bg-cover" style={{ backgroundImage: `url(${redData[Math.ceil(Math.random() * 20)]?.background_image})` }}></div> */}
                         
@@ -56,7 +56,7 @@ function RedButtonBlock({ data }: RedButtonBlockProp){
 
                 {/* Description */}
                 <div className="h-auto w-full flex justify-center items-center">
-                    <span className="h-auto w-11/12 md:w-[790px] my-6 text-[17px] md:text-xl font-bold text-gray-700 tracking-wider">{data.description || "Your movie companion: Nintendo Today!"}</span>
+                    <span className="h-auto w-11/12 md:w-[740px] my-6 text-[17px] md:text-xl font-bold text-gray-700 tracking-wider">{data.description || "Your movie companion: Nintendo Today!"}</span>
                 </div>
 
                 {/* Button Text */}
@@ -64,7 +64,7 @@ function RedButtonBlock({ data }: RedButtonBlockProp){
 
                 {/* Fine Print */}
                 <div className="h-auto w-full mt-4 flex justify-center">
-                    <div className="w-11/12 md:w-[790px] text-[10px] md:text-[12px] text-gray-700 font-light">
+                    <div className="w-11/12 md:w-[740px] text-[10px] md:text-[12px] text-gray-700 font-light">
                         {data.finePrint || ""}
                     </div>
                 </div>

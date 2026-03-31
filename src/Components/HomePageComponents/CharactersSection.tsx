@@ -16,10 +16,10 @@ function CharactersSection({ characters }: CharacterProp){
                 <SectionTitle title="Characters" />
 
                 {/* tiles */}
-                <div className="h-auto w-11/12 md:w-[790px] flex flex-wrap justify-between">
+                <div className="h-auto w-11/12 md:w-[740px] flex flex-wrap justify-between">
                     {characters.characters.map((character, index) => {
-                        return <div key={index} className="h-auto w-40 md:w-[184px]">
-                                    <div className="h-40 md:h-48 w-40 md:w-[184px] bg-blue-300 rounded-lg"></div>
+                        return <div key={index} className="h-auto w-40 md:w-[168px]">
+                                    <div className="h-40 md:h-44 w-40 md:w-[168px] bg-blue-300 rounded-lg"></div>
                                     <div className="h-auto w-full mt-2 mb-3 flex justify-start items-center text-lg md:text-xl font-bold text-gray-600 break-word">{character || "The Legend of Zelda"}</div>
                                 </div>
                     })}

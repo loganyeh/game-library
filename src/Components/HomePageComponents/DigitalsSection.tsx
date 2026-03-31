@@ -9,14 +9,14 @@ function DigitalsSection(){
                 return <div key={index} className="h-auto w-full">
                             <div className="h-auto w-full flex flex-col md:flex-row justify-start items-center">
                                 <SectionTitle title={`Digital ${title}`} />
-                                <div className="md:border-l-2 md:border-gray-300 h-auto w-full -ml-50 mt-4">
+                                <div className="md:border-l-2 md:border-gray-300 h-auto w-full -ml-25 mt-4 hidden md:flex">
                                     <span className="border-b-3 border-red-600 h-full ml-4 font-semibold text-red-600 text-sm md:text-base tracking-wide">See full list</span>
                                 </div>
                             </div>
                             
                             <div className="h-auto w-auto mt-4 pl-5 pb-8 flex overflow-x-auto scroll-smooth">
                                 {Array.from({length: 10}).map((_, index) => {
-                                    return <div key={index} className="border border-gray-600 min-h-96 w-56 md:w-[270px] mx-4 rounded-lg shrink-0">
+                                    return <div key={index} className="border border-gray-400 min-h-96 w-56 md:w-[270px] mx-4 rounded-lg shrink-0">
                                                 <div className="h-5 w-full bg-red-600 flex justify-center items-center text-white font-bold rounded-t-lg">2</div>
 
                                                 <div className="h-52 md:h-[255px] w-full bg-blue-300"></div>

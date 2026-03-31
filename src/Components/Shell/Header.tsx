@@ -13,7 +13,7 @@ function Header(){
             {/* ------------------------ */}
 
             {/* Header for LG and above breakpoints */}
-            <div className="md:hidden lg:flex border bg-white h-[60px] w-full lg:justify-end">
+            <div className="hidden lg:flex border bg-white h-[60px] w-full lg:justify-end">
 
                 {/* Logo */}
                 <div className="h-[60px] w-32 flex justify-center items-center bg-red-600">
@@ -23,7 +23,7 @@ function Header(){
                 {/* Explore Pages */}
                 <div className="border h-[60px] w-auto flex ">
                     {Array.from({length: 3}).map((_, index) => {
-                        return <div className="border h-full w-28 flex justify-center items-center">
+                        return <div key={index} className="border h-full w-28 flex justify-center items-center">
                             <div className="mr-1 flex justify-center items-center"><i className='bx bx-compass text-zinc-800 text-lg'></i></div>
                             <div className="text-zinc-800 text-[15px] font-semibold">Explore</div>
                         </div>

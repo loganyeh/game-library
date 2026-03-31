@@ -39,7 +39,7 @@ function NewsSection(){
                 {/* Small Articles 2x2 */}
                 <div className="h-auto w-full flex justify-center items-center">
 
-                    <div className="h-full w-11/12 md:w-[790px] flex flex-wrap justify-between">
+                    <div className="h-full w-11/12 md:w-[740px] flex flex-wrap justify-between">
                         {Array.from({length: 4}).map((_, index) => {
                             return <div key={index} className="h-auto w-40 md:w-44 mb-6 md:mb-8">
 

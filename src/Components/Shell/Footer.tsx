@@ -60,7 +60,7 @@ function Footer(){
                 </div>
 
                 {/* End of Foooter */}
-                <div className="h-96 w-full bg-zinc-800 flex justify-center">
+                <div className="h-96 md:h-80 w-full bg-zinc-800 flex justify-center">
                     <div className="h-full w-8/12 flex flex-col justify-start">
                         <div className="mt-8 flex justify-center items-center text-white text-[10px] tracking-wide">© Nintendo.Games are property of their respective owners.Nintendo of America Inc.Headquarters are in Redmond, Washington, USA</div>
                         <div className="mt-6 flex justify-between items-center text-white text-[10px] font-light">
