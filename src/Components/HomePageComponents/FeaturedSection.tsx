@@ -25,19 +25,19 @@ function FeaturedSection(){
 
     return(
         <>
-            <div className="border-b border-gray-300 h-auto w-full pb-6 md:pb-16">     
+            <div className="border-b border-gray-300 h-auto w-full pb-6 md:pb-12">     
                 {/* title */}
                 <SectionTitle title="Featured"/>
 
                 {/* Featured Scroll Tiles */}
-                <div className="h-auto w-auto py-1 flex justify-start items-center overflow-x-auto scroll-smooth">
+                <div className="h-auto w-auto py-1 pb-5 flex justify-start items-start overflow-x-auto scroll-smooth">
                     {loading ?
                         (Array.from({length: 10}).map((_, index) => {
-                            return <div key={index} className="border border-gray-300 h-64 w-52 mx-4 rounded-lg shrink-0">
-                                        <div className="h-28 w-full flex justify-center items-end bg-gray-300 rounded-t-lg">
-                                            <div className="flex justify-center items-center -mb-3 animate-spin"><i className='bx bx-loader-alt text-2xl'></i></div>
+                            return <div key={index} className="border border-gray-300 h-auto w-52 md:w-[275px] mx-4 md:mx-5 rounded-lg shrink-0">
+                                        <div className="h-28 md:h-44 w-full flex justify-center items-center bg-gray-300 rounded-t-lg">
+                                            <div className="animate-spin"><i className='bx bx-loader-alt text-2xl'></i></div>
                                         </div>
-                                        <div className="h-36 w-full flex flex-col justify-between items-center rounded-b-lg"></div>
+                                        <div className="h-36 md:h-40 w-full flex flex-col justify-between md:justify-around items-center rounded-b-lg"></div>
                                     </div>
                         }))
                         :
@@ -45,7 +45,6 @@ function FeaturedSection(){
                             return <FeatureTile key={index} name={game.name} background_image={game.background_image} />
                         }))
                     }
-
                 </div>
 
             </div>
