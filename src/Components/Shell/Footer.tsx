@@ -31,7 +31,7 @@ function Footer(){
                 </div>
 
                 {/* Links */}
-                <div className="border h-auto w-full flex flex-col md:flex-row md:flex-wrap justify-start items-center md:items-start mt-12">
+                <div className="h-auto w-full flex flex-col md:flex-row md:flex-wrap justify-start items-center md:items-start mt-12">
                     {footerData.map((data, index) => {
                         return <div key={index} className="border-l border-gray-300 h-auto w-4/5 md:w-1/4 2xl:w-2/12 mb-8 pl-8 flex flex-col">
                                     <div className="h-10 md:h-auto flex items-center text-lg text-zinc-700 font-semibold tracking-wide">{data.title || "About Nintendo"}</div>

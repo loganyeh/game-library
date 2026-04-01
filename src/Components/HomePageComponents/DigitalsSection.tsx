@@ -1,4 +1,4 @@
-import SectionTitle from "./SharedHomepageComps/SectionTitle";
+import SectionTitle from "./HomepageSharedComps/SectionTitle";
 
 function DigitalsSection(){
     const digitalSectionTitles = ["best sellers", "new releases"];

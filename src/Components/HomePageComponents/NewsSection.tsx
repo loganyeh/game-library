@@ -1,4 +1,4 @@
-import SectionTitle from "./SharedHomepageComps/SectionTitle";
+import SectionTitle from "./HomepageSharedComps/SectionTitle";
 import RedClickButton from "./RedButtonBlockComps/RedClickButton";
 
 function NewsSection(){

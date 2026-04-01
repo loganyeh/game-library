@@ -1,4 +1,4 @@
-import SectionTitle from "./SharedHomepageComps/SectionTitle";
+import SectionTitle from "./HomepageSharedComps/SectionTitle";
 
 import type { CharactersData } from "../../Pages/HomePage";
 

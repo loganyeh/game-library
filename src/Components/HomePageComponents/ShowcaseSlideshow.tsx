@@ -24,7 +24,7 @@ function ShowcaseSlideshow(){
         <>
             <div className="h-auto w-full">
                 {/* Image Slideshow */}
-                <div className="h-[425px] md:h-[875px] lg:h-[1150px] xl:h-[550px] 2xl:h-[925px] w-full flex justify-center items-center bg-gray-300">
+                <div className="h-[425px] md:h-[875px] lg:h-[1150px] xl:h-[550px] 2xl:h-[600px] w-full flex justify-center items-center bg-gray-300">
                     {loading ?
                         (<div className="flex justify-center items-center animate-spin"><i className='bx bx-loader-alt text-4xl'></i></div>)
                         :

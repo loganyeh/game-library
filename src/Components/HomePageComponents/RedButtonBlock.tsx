@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import SectionTitle from "./SharedHomepageComps/SectionTitle";
+import SectionTitle from "./HomepageSharedComps/SectionTitle";
 import RedClickButton from "./RedButtonBlockComps/RedClickButton";
 
 import type { RedButtonBlockType } from "../../Pages/HomePage";
@@ -56,7 +56,7 @@ function RedButtonBlock({ data }: RedButtonBlockProp){
                 </div>
 
                 {/* Button Text */}
-                <div className="flex xl:hidden">
+                <div className="flex w-full xl:hidden">
                     <RedClickButton buttonText={data.buttonText} icon={data.icon} />
                 </div>
 
