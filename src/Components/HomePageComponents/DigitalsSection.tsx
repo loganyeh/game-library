@@ -7,14 +7,14 @@ function DigitalsSection(){
         <>
             {digitalSectionTitles.map((title, index) => {
                 return <div key={index} className="h-auto w-full">
-                            <div className="border h-auto w-full` flex flex-col md:flex-row justify-start items-center">
+                            <div className="h-auto w-full xl:pl-30 flex flex-col md:flex-row justify-start items-center">
                                 <SectionTitle title={`Digital ${title}`} />
-                                <div className="md:border-l-2 md:border-gray-300 h-auto w-full -ml-25 lg:-ml-100 mt-4 hidden md:flex">
+                                <div className="md:border-l-2 md:border-gray-300 h-auto w-full -ml-25 lg:-ml-100 xl:-ml-175 mt-4 hidden md:flex">
                                     <span className="border-b-3 border-red-600 h-full ml-4 font-semibold text-red-600 text-sm md:text-base tracking-wide">See full list</span>
                                 </div>
                             </div>
                             
-                            <div className="h-auto w-auto mt-4 pl-5 pb-8 flex overflow-x-auto scroll-smooth">
+                            <div className="h-auto w-auto xl:w-[1200px] mt-4 xl:ml-30 pl-5 pb-8 flex overflow-x-auto scroll-smooth">
                                 {Array.from({length: 10}).map((_, index) => {
                                     return <div key={index} className="border border-gray-400 min-h-96 w-56 md:w-[270px] mx-4 rounded-lg shrink-0">
                                                 <div className="h-5 w-full bg-red-600 flex justify-center items-center text-white font-bold rounded-t-lg">2</div>
