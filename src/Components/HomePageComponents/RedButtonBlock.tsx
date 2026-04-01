@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+// import { useEffect } from "react";
 
 import SectionTitle from "./HomepageSharedComps/SectionTitle";
 import RedClickButton from "./RedButtonBlockComps/RedClickButton";
 
 import type { RedButtonBlockType } from "../../Pages/HomePage";
-import { fetchRedButtonImg, type RedButtonImg } from "../../API/HomepageAPI";
+// import { type RedButtonImg } from "../../API/HomepageAPI";
+// import { fetchRedButtonImg, type RedButtonImg } from "../../API/HomepageAPI";
 
 type RedButtonBlockProp = {
     data: RedButtonBlockType;
@@ -12,7 +14,7 @@ type RedButtonBlockProp = {
 
 function RedButtonBlock({ data }: RedButtonBlockProp){
     const [loading, setLoading] = useState(true);
-    const [redData, setRedData] = useState<RedButtonImg[]>([]);
+    // const [redData, setRedData] = useState<RedButtonImg[]>([]);
 
     // useEffect(() => {
     //     async function getRedButton(){
@@ -27,6 +29,9 @@ function RedButtonBlock({ data }: RedButtonBlockProp){
     //     getRedButton();
     // }, [])
 
+    useEffect(() => {
+        setLoading(false);
+    }, [])
 
     return(
         <>
@@ -45,7 +50,8 @@ function RedButtonBlock({ data }: RedButtonBlockProp){
                                 <div className="flex justify-center items-center"><i className='bx bx-loader-alt text-2xl'></i></div>
                             </div>)
                             :
-                            (<div className="h-full md:w-full w-full bg-gray-300 rounded-lg bg-cover bg-center" style={{ backgroundImage: `url(${redData[Math.ceil(Math.random() * 19)]?.background_image})` }}></div>)
+                            (<div className="h-full md:w-full w-full bg-gray-300 rounded-lg bg-cover bg-center"></div>)
+                            // (<div className="h-full md:w-full w-full bg-gray-300 rounded-lg bg-cover bg-center" style={{ backgroundImage: `url(${redData[Math.ceil(Math.random() * 19)]?.background_image})` }}></div>)
                         }
                     </div>
                 </div>

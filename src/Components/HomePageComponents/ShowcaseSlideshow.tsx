@@ -1,11 +1,12 @@
-import { useState, useEffect } from "react";
-import { fetchShowcase } from "../../API/HomepageAPI";
+import { useEffect, useState } from "react";
+// import { useEffect } from "react";
+// import { fetchShowcase } from "../../API/HomepageAPI";
 
 import type { Game } from "../../API/HomepageAPI";
 
 function ShowcaseSlideshow(){
     const [loading, setLoading] = useState(true);
-    const [showcaseData, setShowcaseData] = useState<Game[]>([]);
+    // const [showcaseData, setShowcaseData] = useState<Game[]>([]);
 
     // useEffect(() => {
     //     async function getShowcase(){
@@ -20,6 +21,10 @@ function ShowcaseSlideshow(){
     //     getShowcase();
     // }, []);
 
+    useEffect(() => {
+        setLoading(false);
+    }, [])
+
     return(
         <>
             <div className="h-auto w-full">
@@ -28,12 +33,18 @@ function ShowcaseSlideshow(){
                     {loading ?
                         (<div className="flex justify-center items-center animate-spin"><i className='bx bx-loader-alt text-4xl'></i></div>)
                         :
-                        (showcaseData.slice(8, 9).map((game, _) => {
+                        (Array.from({length: 4}).map((_, index) => {
                             // return <div key={game.id} className={`h-full w-full bg-center bg-cover`} style={{backgroundImage: `url(${game.background_image})`}}>
-                            return <div key={game.id} className={`h-full w-full bg-center bg-gray-300`}>
+                            return <div key={index} className={`h-full w-full bg-center bg-gray-300`}>
                                 
                             </div>
                         }))
+                        // (showcaseData.slice(8, 9).map((game, _) => {
+                        //     // return <div key={game.id} className={`h-full w-full bg-center bg-cover`} style={{backgroundImage: `url(${game.background_image})`}}>
+                        //     return <div key={game.id} className={`h-full w-full bg-center bg-gray-300`}>
+                                
+                        //     </div>
+                        // }))
                     }
                 </div>
 
@@ -50,9 +61,12 @@ function ShowcaseSlideshow(){
                                 </div>
                             })) 
                             :
-                            (showcaseData.slice(0, 4).map((game, index) => {
-                                return <div key={index} className="h-12 w-12 bg-gray-300 rounded-lg shadow-md bg-center bg-cover" style={{backgroundImage: `url(${game.background_image})`}}></div>
+                            (Array.from({length: 4}).map((_, index) => {
+                                return <div key={index} className="h-12 w-12 bg-gray-300 rounded-lg shadow-md bg-center bg-cover"></div>
                             }))
+                            // (showcaseData.slice(0, 4).map((game, index) => {
+                            //     return <div key={index} className="h-12 w-12 bg-gray-300 rounded-lg shadow-md bg-center bg-cover" style={{backgroundImage: `url(${game.background_image})`}}></div>
+                            // }))
                         }
                     </div>
                     <div className="border-b border-gray-300 h-auto w-11/12"></div>
