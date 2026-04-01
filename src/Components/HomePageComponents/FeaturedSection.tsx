@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import SectionTitle from "./HomepageSharedComps/SectionTitle";
+import SectionTitle from "./SharedHomepageComps/SectionTitle";
 import FeatureTile from "./FeaturedComps/FeatureTile";
 import { fetchFeature } from "../../API/HomepageAPI";
 import type { FeatureDM } from "../../API/HomepageAPI";
@@ -8,18 +8,18 @@ function FeaturedSection(){
     const [loading, setLoading] = useState(true);
     const [featureData, setFeatureData] = useState<FeatureDM[]>([]);
 
-    useEffect(() => {
-        async function getFeature(){
-            setLoading(true);
+    // useEffect(() => {
+    //     async function getFeature(){
+    //         setLoading(true);
 
-            const data = await fetchFeature();
-            setFeatureData(data);
+    //         const data = await fetchFeature();
+    //         setFeatureData(data);
 
-            setLoading(false);
-        }
+    //         setLoading(false);
+    //     }
 
-        getFeature();
-    }, []);
+    //     getFeature();
+    // }, []);
 
     // console.log(featureData[0]?.platforms[0]?.platform.name);
 
@@ -27,6 +27,9 @@ function FeaturedSection(){
         <>
             <div className="border-b border-gray-300 h-auto w-full pb-6 md:pb-12">     
                 {/* title */}
+                {/* <div className="xl:pl-5">
+                    <SectionTitle title="Featured"/>
+                </div> */}
                 <SectionTitle title="Featured"/>
 
                 {/* Featured Scroll Tiles */}
@@ -34,8 +37,8 @@ function FeaturedSection(){
                     {loading ?
                         (Array.from({length: 10}).map((_, index) => {
                             return <div key={index} className="border border-gray-300 h-auto w-52 md:w-[275px] mx-4 md:mx-5 rounded-lg shrink-0">
-                                        <div className="h-28 md:h-44 w-full flex justify-center items-center bg-gray-300 rounded-t-lg">
-                                            <div className="animate-spin"><i className='bx bx-loader-alt text-2xl'></i></div>
+                                        <div className="h-28 md:h-44 w-full flex justify-center items-center bg-blue-300 rounded-t-lg">
+                                            <div className=""><i className='bx bx-loader-alt text-2xl'></i></div>
                                         </div>
                                         <div className="h-36 md:h-40 w-full flex flex-col justify-between md:justify-around items-center rounded-b-lg"></div>
                                     </div>
