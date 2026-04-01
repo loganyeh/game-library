@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 // import { useEffect } from "react";
 // import { fetchShowcase } from "../../API/HomepageAPI";
 
-import type { Game } from "../../API/HomepageAPI";
+// import type { Game } from "../../API/HomepageAPI";
 
 function ShowcaseSlideshow(){
     const [loading, setLoading] = useState(true);

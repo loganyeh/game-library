@@ -3,12 +3,12 @@ import { useEffect } from "react";
 import SectionTitle from "./HomepageSharedComps/SectionTitle";
 import FeatureTile from "./FeaturedComps/FeatureTile";
 // import { fetchFeature } from "../../API/HomepageAPI";
-import type { FeatureDM } from "../../API/HomepageAPI";
+// import type { FeatureDM } from "../../API/HomepageAPI";
 // import { useFetcher } from "react-router-dom";
 
 function FeaturedSection(){
     const [loading, setLoading] = useState(true);
-    const [featureData, setFeatureData] = useState<FeatureDM[]>([]);
+    // const [featureData, setFeatureData] = useState<FeatureDM[]>([]);
 
     // useEffect(() => {
     //     async function getFeature(){
@@ -25,7 +25,6 @@ function FeaturedSection(){
 
     useEffect(() => {
         setLoading(false);
-        setFeatureData([]);
     }, [])
 
     // console.log(featureData[0]?.platforms[0]?.platform.name);
