@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import SectionTitle from "./SharedHomepageComps/SectionTitle";
+import SectionTitle from "./HomepageSharedComps/SectionTitle";
 import FeatureTile from "./FeaturedComps/FeatureTile";
 import { fetchFeature } from "../../API/HomepageAPI";
 import type { FeatureDM } from "../../API/HomepageAPI";
