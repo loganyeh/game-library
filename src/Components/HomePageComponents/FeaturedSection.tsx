@@ -27,6 +27,9 @@ function FeaturedSection(){
         <>
             <div className="border-b border-gray-300 h-auto w-full pb-6 md:pb-12">     
                 {/* title */}
+                {/* <div className="xl:pl-5">
+                    <SectionTitle title="Featured"/>
+                </div> */}
                 <SectionTitle title="Featured"/>
 
                 {/* Featured Scroll Tiles */}

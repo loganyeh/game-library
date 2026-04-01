@@ -7,7 +7,7 @@ function DigitalsSection(){
         <>
             {digitalSectionTitles.map((title, index) => {
                 return <div key={index} className="h-auto w-full">
-                            <div className="h-auto w-full flex flex-col md:flex-row justify-start items-center">
+                            <div className="border h-auto w-full` flex flex-col md:flex-row justify-start items-center">
                                 <SectionTitle title={`Digital ${title}`} />
                                 <div className="md:border-l-2 md:border-gray-300 h-auto w-full -ml-25 lg:-ml-100 mt-4 hidden md:flex">
                                     <span className="border-b-3 border-red-600 h-full ml-4 font-semibold text-red-600 text-sm md:text-base tracking-wide">See full list</span>
