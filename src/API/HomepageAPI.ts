@@ -9,7 +9,7 @@ type ShowcaseApi = {
     results: Game[];
 }
 export async function fetchShowcase(){
-    const response = await fetch(`https://api.rawg.io/api/games?key=59f33c3c1f1b42118f8f6fcd1cbb7e80`);
+    const response = await fetch(`https://api.rawg.io/api/games?key=3e947aab0171433bb1b9715a1c39b1fc`);
     const data: ShowcaseApi = await response.json();
     // console.log(data.results);
 
@@ -36,7 +36,7 @@ type FeatureApi = {
     results: FeatureDM[];
 }
 export async function fetchFeature(){
-    const response = await fetch(`https://api.rawg.io/api/games?key=59f33c3c1f1b42118f8f6fcd1cbb7e80`);
+    const response = await fetch(`https://api.rawg.io/api/games?key=3e947aab0171433bb1b9715a1c39b1fc`);
     const data: FeatureApi = await response.json();
     console.log(data.results);
 
@@ -54,7 +54,7 @@ type RedApi = {
 }
 
 export async function fetchRedButtonImg(){
-    const response = await fetch(`https://api.rawg.io/api/games?key=59f33c3c1f1b42118f8f6fcd1cbb7e80`);
+    const response = await fetch(`https://api.rawg.io/api/games?key=3e947aab0171433bb1b9715a1c39b1fc`);
     const data: RedApi = await response.json();
 
     return data.results;
