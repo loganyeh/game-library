@@ -1,29 +1,25 @@
 import { useEffect, useState } from "react";
 // import { useEffect } from "react";
-// import { fetchShowcase } from "../../API/HomepageAPI";
+import { fetchShowcase } from "../../API/HomepageAPI";
 
-// import type { Game } from "../../API/HomepageAPI";
+import type { Game } from "../../API/HomepageAPI";
 
 function ShowcaseSlideshow(){
     const [loading, setLoading] = useState(true);
-    // const [showcaseData, setShowcaseData] = useState<Game[]>([]);
-
-    // useEffect(() => {
-    //     async function getShowcase(){
-    //         setLoading(true);
-
-    //         const data = await fetchShowcase();
-    //         setShowcaseData(data);
-
-    //         setLoading(false);
-    //     }
-
-    //     getShowcase();
-    // }, []);
+    const [showcaseData, setShowcaseData] = useState<Game[]>([]);
 
     useEffect(() => {
-        setLoading(false);
-    }, [])
+        async function getShowcase(){
+            setLoading(true);
+
+            // const data = await fetchShowcase();
+            // setShowcaseData(data);
+
+            setLoading(false);
+        }
+
+        getShowcase();
+    }, []);
 
     return(
         <>
@@ -33,18 +29,18 @@ function ShowcaseSlideshow(){
                     {loading ?
                         (<div className="flex justify-center items-center animate-spin"><i className='bx bx-loader-alt text-4xl'></i></div>)
                         :
-                        (Array.from({length: 4}).map((_, index) => {
-                            // return <div key={game.id} className={`h-full w-full bg-center bg-cover`} style={{backgroundImage: `url(${game.background_image})`}}>
-                            return <div key={index} className={`h-full w-full bg-center bg-gray-300`}>
-                                
-                            </div>
-                        }))
-                        // (showcaseData.slice(8, 9).map((game, _) => {
+                        // (Array.from({length: 4}).map((_, index) => {
                         //     // return <div key={game.id} className={`h-full w-full bg-center bg-cover`} style={{backgroundImage: `url(${game.background_image})`}}>
-                        //     return <div key={game.id} className={`h-full w-full bg-center bg-gray-300`}>
+                        //     return <div key={index} className={`h-full w-full bg-center bg-gray-300`}>
                                 
                         //     </div>
                         // }))
+                        (showcaseData.slice(8, 9).map((game, _) => {
+                            return <div key={game.id} className={`h-full w-full bg-center bg-cover`} style={{backgroundImage: `url(${game.background_image})`}}>
+                            {/* // return <div key={game.id} className={`h-full w-full bg-center bg-gray-300`}> */}
+                                
+                            </div>
+                        }))
                     }
                 </div>
 
