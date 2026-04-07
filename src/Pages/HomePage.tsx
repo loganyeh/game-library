@@ -38,7 +38,9 @@ function DashboardPage(){
         <>
             <div className="h-auto w-screen">
 
+                {/* ✅ */}
                 <Header />
+
 
                 <ShowcaseSlideshow />
 
