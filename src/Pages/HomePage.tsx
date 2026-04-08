@@ -55,9 +55,10 @@ function DashboardPage(){
                 {/* ✅ */}
                 <NewsSection />
 
-                {/*  */}
+                {/* ✅ */}
                 <CharactersSection characters={charactersSectionData} />
                 
+                {/*  */}
                 <DigitalsSection />
 
                 {/* <NavBar /> */}
