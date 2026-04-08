@@ -39,24 +39,24 @@ function DashboardPage(){
             <div className="h-auto w-screen">
 
                 {/* ✅ */}
-                <Header />
+                {/* <Header /> */}
 
                 {/* ✅ */}
-                <ShowcaseSlideshow />
+                {/* <ShowcaseSlideshow /> */}
 
                 {/* ✅ */}
-                <FeaturedSection />
+                {/* <FeaturedSection /> */}
 
                 {/* ✅ */}
-                {redButtonBlockData.map((data, index) => {
+                {/* {redButtonBlockData.map((data, index) => {
                     return <RedButtonBlock key={index} data={data} />
-                })}
+                })} */}
 
                 {/* ✅ */}
-                <NewsSection />
+                {/* <NewsSection /> */}
 
                 {/* ✅ */}
-                <CharactersSection characters={charactersSectionData} />
+                {/* <CharactersSection characters={charactersSectionData} /> */}
                 
                 {/*  */}
                 <DigitalsSection />
