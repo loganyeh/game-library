@@ -23,54 +23,62 @@ function Footer(){
 
     return(
         <>
-            <div className="h-auto w-full mt-18">         
+            <div className="flex flex-col items-center">         
 
                 {/* Logo */}
-                <div className="h-32 w-full bg-red-600 flex justify-center items-center">
+                <div className="w-full bg-red-600 mt-18 py-10 flex justify-center">
                     <div className="border-5 border-white px-2 text-2xl text-white font-bold tracking-widest rounded-3xl">Nintendo</div>
                 </div>
 
                 {/* Links */}
-                <div className="h-auto w-full flex flex-col md:flex-row md:flex-wrap justify-start items-center md:items-start mt-12">
+                <div className="w-full max-w-7xl p-12 flex gap-10 flex-col md:grid md:grid-cols-3 xl:grid-cols-6">
                     {footerData.map((data, index) => {
-                        return <div key={index} className="border-l border-gray-300 h-auto w-4/5 md:w-1/4 2xl:w-2/12 mb-8 pl-8 flex flex-col">
-                                    <div className="h-10 md:h-auto flex items-center text-lg text-zinc-700 font-semibold tracking-wide">{data.title || "About Nintendo"}</div>
+                        return <div key={index} className="border-l border-gray-300 w-full pl-8 flex gap-3 flex-col">
+                                    <div className="py-1.5 text-lg text-zinc-700 font-semibold tracking-wide">{data.title}</div>
                                     
-                                    <div className="h-auto flex flex-col mt-2">
+                                    <div className="flex gap-2 flex-col">
                                         {data.links.map((link, index) => {
-                                            return <div key={index} className="h-6 md:h-auto mb-2 flex items-center text-sm md:text-base text-red-600 font-bold tracking-wide">{link || "Careers"}</div>
+                                            return <div key={index} className="text-sm text-red-600 font-bold tracking-wide">{link}</div>
                                         })}
                                     </div>
                                 </div>
                     })}
                 </div>
-
-                {/* Social Media Icons */}
-                <div className="h-auto w-full flex justify-center items-center">
-                    <div className="h-auto w-2/3 md:w-1/3 2xl:w-2/12 flex justify-between items-center">
+                
+                {/* Social & Ads */}
+                <div className="w-full max-w-7xl xl:px-10 flex flex-col items-center xl:flex-row xl:justify-between">
+                    {/* Social Media Icons */}
+                    <div className="flex gap-10">
                         {socialMediaIcons.map((icon, index) => {
-                            return <div key={index} className="flex justify-center items-center"><i className={`bx bxl-${icon} text-4xl md:text-[40px] text-zinc-700`} ></i></div>
+                            return <i key={index} className={`bx bxl-${icon} text-4xl md:text-[40px] text-zinc-700`} ></i>
                         })}
                     </div>
-                </div>
 
-                {/* Ad Box */}
-                <div className="h-44 w-full flex justify-center items-center">
-                    <div className="border h-18 w-auto flex justify-center items-center">Place Advertisement Here</div>
+                    {/* Ad Box */}
+                    <div className="w-fit my-14 xl:my-10 py-6 bg-blue-300">Place Advertisement Here</div>
+                    {/* <div className="w-full max-w-[150px] my-14 xl:my-10 py-5 text-center bg-blue-300">Place Advertisement Here</div> */}
                 </div>
 
                 {/* End of Foooter */}
-                <div className="h-96 md:h-80 xl:h-40 w-full bg-zinc-800 flex justify-center">
-                    <div className="h-full w-8/12 flex flex-col justify-start">
-                        <div className="mt-8 flex justify-center items-center text-white text-[10px] tracking-wide">© Nintendo.Games are property of their respective owners.Nintendo of America Inc.Headquarters are in Redmond, Washington, USA</div>
-                        <div className="mt-6 flex justify-between items-center text-white text-[10px] font-light">
+                {/* <div className="h-96 md:h-80 xl:h-40 w-full bg-zinc-800 flex justify-center"> */}
+                    <div className="w-full pt-10 pb-40 flex gap-6 flex-col items-center bg-zinc-800">
+                        <div className="border text-white text-center text-[10px] tracking-wide">
+                            © Nintendo. <br />
+                            Games are property of their respective owners. <br />
+                            Nintendo of America Inc. <br />
+                            Headquarters are in Redmond, Washington, USA
+                        </div>
+
+                        <div className="border flex gap-5 text-white text-[10px] font-light">
                             {contactData.map((text, index) => {
                                 return <div key={index}>{text}</div>
                             })}
                         </div>
-                        <div className="mt-8 flex justify-center items-center text-white text-sm">🇺🇸 English (United States)</div>
+
+                        <div className="border text-white text-sm">🇺🇸 English (United States)</div>
+
                     </div>
-                </div>
+                {/* </div> */}
 
             </div>
 
