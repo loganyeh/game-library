@@ -1,77 +1,45 @@
 import { useEffect, useState } from "react";
-// import { useEffect } from "react";
-// import { fetchShowcase } from "../../API/HomepageAPI";
+import { fetchShowcase } from "../../API/HomepageAPI";
 
-// import type { Game } from "../../API/HomepageAPI";
+import type { Game } from "../../API/HomepageAPI";
 
 function ShowcaseSlideshow(){
     const [loading, setLoading] = useState(true);
-    // const [showcaseData, setShowcaseData] = useState<Game[]>([]);
+    const [showcaseData, setShowcaseData] = useState<Game[]>([]);
 
-    // useEffect(() => {
-    //     async function getShowcase(){
-    //         setLoading(true);
-
-    //         const data = await fetchShowcase();
-    //         setShowcaseData(data);
-
-    //         setLoading(false);
-    //     }
-
-    //     getShowcase();
-    // }, []);
-
+    // change api fetch function name
     useEffect(() => {
-        setLoading(false);
-    }, [])
+        async function getShowcase(){
+            setLoading(true);
+
+            // const data = await fetchShowcase();
+            // setShowcaseData(data);
+
+            setLoading(false);
+        }
+
+        getShowcase();
+    }, []);
 
     return(
         <>
-            <div className="h-auto w-full">
-                {/* Image Slideshow */}
-                <div className="h-[425px] md:h-[875px] lg:h-[1150px] xl:h-[550px] 2xl:h-[600px] w-full flex justify-center items-center bg-gray-300">
-                    {loading ?
-                        (<div className="flex justify-center items-center animate-spin"><i className='bx bx-loader-alt text-4xl'></i></div>)
-                        :
-                        (Array.from({length: 4}).map((_, index) => {
-                            // return <div key={game.id} className={`h-full w-full bg-center bg-cover`} style={{backgroundImage: `url(${game.background_image})`}}>
-                            return <div key={index} className={`h-full w-full bg-center bg-gray-300`}>
-                                
-                            </div>
-                        }))
-                        // (showcaseData.slice(8, 9).map((game, _) => {
-                        //     // return <div key={game.id} className={`h-full w-full bg-center bg-cover`} style={{backgroundImage: `url(${game.background_image})`}}>
-                        //     return <div key={game.id} className={`h-full w-full bg-center bg-gray-300`}>
-                                
-                        //     </div>
-                        // }))
-                    }
-                </div>
+            {/* Image Slideshow */}
+            <div className="aspect-15/16 xl:aspect-16/6 flex justify-center items-center bg-blue-300">
+                {/* add api stuff here */}
+            </div>
 
-                {/* Slideshow Preview */}
-                <div className="h-20 md:h-36 w-full flex flex-col justify-center items-center">
-                    <div className="h-full w-9/12 md:w-5/12 lg:w-4/12 xl:w-3/12 2xl:w-2/12 md:pt-6 2xl:pt-12 flex justify-between items-center md:items-start">
-                        <div className="h-12 w-12 flex justify-center items-center">
-                            <div className="h-[36px] w-[36px] flex justify-center items-center bg-red-600 rounded-full"><i className='bx bx-pause text-white text-4xl'></i></div>
-                        </div>
-                        {loading ?
-                            (Array.from({length: 4}).map((_, index) => {
-                                return <div key={index} className="h-12 w-12 flex justify-center items-center bg-blue-300 rounded-lg">
-                                    <div className="flex justify-center items-center"><i className='bx bx-loader-alt'></i></div>
-                                </div>
-                            })) 
-                            :
-                            (Array.from({length: 4}).map((_, index) => {
-                                return <div key={index} className="h-12 w-12 bg-gray-300 rounded-lg shadow-md bg-center bg-cover"></div>
-                            }))
-                            // (showcaseData.slice(0, 4).map((game, index) => {
-                            //     return <div key={index} className="h-12 w-12 bg-gray-300 rounded-lg shadow-md bg-center bg-cover" style={{backgroundImage: `url(${game.background_image})`}}></div>
-                            // }))
-                        }
-                    </div>
-                    <div className="border-b border-gray-300 h-auto w-11/12"></div>
-                </div>
+            {/* Slideshow Preview */}
+            <div className="px-4 flex justify-center">
+                <div className="border-b border-gray-300 w-full max-w-7xl py-4 md:pb-14 xl:pt-10 flex gap-4 md:gap-6 justify-center items-center">
+                    {/* Pause Button */}
+                    <i className='bx bx-pause text-white text-4xl bg-red-600 rounded-full'></i>
 
+                    {/* Preview Slides */}
+                    {Array.from({length: 4}).map((_, index) => {
+                        return <div key={index} className="p-6 bg-blue-300 rounded-lg bg-center bg-cover"></div>
+                    })}
+
+                </div>
             </div>
         </>
     )

@@ -9,12 +9,10 @@ function RedClickButton({ buttonText, icon }: RedButtonProp ){
 
     return(
         <>
-            <div className="h-auto w-full xl:w-auto flex justify-center items-center">
-                <div className="h-12 w-11/12 md:w-[740px] lg:w-[990px] xl:w-auto flex justify-center items-center bg-red-600 text-white font-semibold text-base tracking-wider rounded-md">
-                    <div className={`${icon === "" ? "hidden" : "" } mr-4 flex justify-center items-center`}><i className={icon} ></i></div>
-                    <div className="xl:px-4 flex justify-center items-center">{buttonText || "Learn More"}</div>
-                </div>
-            </div> 
+            <div className="w-full max-w-6xl xl:w-fit py-3 flex gap-4 xl:gap-0 justify-center items-center bg-red-600 xl:bg-white text-white font-semibold tracking-wider rounded-md xl:shrink-0">
+                {/* <i className={`${icon === "" ? "hidden" : `${icon} xl:bg-red-600 xl:py-3 xl:rounded-l-lg`}`} ></i> */}
+                <div className="md:text-lg xl:bg-red-600 xl:px-5 xl:py-2 xl:rounded-lg">{buttonText || "Learn More"}</div>
+            </div>
         </>
     )
 }

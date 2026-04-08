@@ -38,20 +38,27 @@ function DashboardPage(){
         <>
             <div className="h-auto w-screen">
 
+                {/* ✅ */}
                 <Header />
 
+                {/* ✅ */}
                 <ShowcaseSlideshow />
 
+                {/* ✅ */}
                 <FeaturedSection />
 
+                {/* ✅ */}
                 {redButtonBlockData.map((data, index) => {
                     return <RedButtonBlock key={index} data={data} />
                 })}
 
+                {/* ✅ */}
                 <NewsSection />
 
+                {/* ✅ */}
                 <CharactersSection characters={charactersSectionData} />
                 
+                {/*  */}
                 <DigitalsSection />
 
                 {/* <NavBar /> */}

@@ -10,24 +10,23 @@ function CharactersSection({ characters }: CharacterProp){
 
     return(
         <>
-            <div className="border-b border-gray-300 h-auto w-full pb-3 md:pb-14 flex flex-col justify-start items-center">
+            <div className="mx-4 lg:mx-6 flex flex-col items-center">
 
                 {/* title */}
-                <div className="w-full xl:w-[1200px]">
-                    <SectionTitle title="Characters" />
-                </div>
+                <SectionTitle title="Characters" />
 
                 {/* tiles */}
-                <div className="h-auto w-11/12 md:w-[740px] lg:w-[990px] xl:w-[1200px] flex flex-wrap justify-between">
+                <div className="w-full max-w-6xl grid grid-cols-2 gap-4 md:grid-cols-4 2xl:gap-5">
                     {characters.characters.map((character, index) => {
-                        return <div key={index} className="h-auto w-auto">
-                                    <div className="h-40 md:h-44 lg:h-[240px] xl:h-[265px] w-40 md:w-[168px] lg:w-[230px] xl:w-[275px] bg-blue-300 rounded-lg"></div>
-                                    <div className="h-auto w-full mt-2 mb-3 flex justify-start items-center text-lg md:text-xl font-bold text-gray-600 break-word">{character || "The Legend of Zelda"}</div>
+                        return <div key={index} className="flex flex-col gap-2">
+                                    <div className="aspect-square bg-blue-300 rounded-lg"></div>
+                                    <div className="text-lg md:text-xl font-bold text-zinc-700 break-word">{character || "The Legend of Zelda"}</div>
                                 </div>
                     })}
                 </div>
 
-                </div>
+                <div className="border-b border-gray-300 w-full mt-8 md:mt-20 lg:mt-14"></div>
+            </div>
         
         </>
     )

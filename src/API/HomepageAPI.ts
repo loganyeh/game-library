@@ -16,50 +16,6 @@ export async function fetchShowcase(){
     return data.results;
 }
 
-// api FEATURED
-export type FeatureDM = {
-    id: number;
-    name: string;
-    background_image: string;
-    // platforms?: PlatformsDM;
-}
-// export type PlatformsDM = {
-//     platforms: [
-//         {
-//             platform: {
-//                 name: string;
-//             }
-//         }
-//     ]
-// }
-type FeatureApi = {
-    results: FeatureDM[];
-}
-export async function fetchFeature(){
-    const response = await fetch(`https://api.rawg.io/api/games?key=3e947aab0171433bb1b9715a1c39b1fc`);
-    const data: FeatureApi = await response.json();
-    console.log(data.results);
-
-    return data.results;
-}
-
-// RED BUTTON - API
-export type RedButtonImg = {
-    id: number; 
-    name: string;
-    background_image: string;
-}
-type RedApi = {
-    results: RedButtonImg[];
-}
-
-export async function fetchRedButtonImg(){
-    const response = await fetch(`https://api.rawg.io/api/games?key=3e947aab0171433bb1b9715a1c39b1fc`);
-    const data: RedApi = await response.json();
-
-    return data.results;
-}
-
 
 
 
