@@ -60,25 +60,23 @@ function Footer(){
                 </div>
 
                 {/* End of Foooter */}
-                {/* <div className="h-96 md:h-80 xl:h-40 w-full bg-zinc-800 flex justify-center"> */}
-                    <div className="w-full pt-10 pb-40 flex gap-6 flex-col items-center bg-zinc-800">
-                        <div className="border text-white text-center text-[10px] tracking-wide">
-                            © Nintendo. <br />
-                            Games are property of their respective owners. <br />
-                            Nintendo of America Inc. <br />
-                            Headquarters are in Redmond, Washington, USA
-                        </div>
-
-                        <div className="border flex gap-5 text-white text-[10px] font-light">
-                            {contactData.map((text, index) => {
-                                return <div key={index}>{text}</div>
-                            })}
-                        </div>
-
-                        <div className="border text-white text-sm">🇺🇸 English (United States)</div>
-
+                <div className="w-full pt-10 pb-40 xl:py-10 flex gap-6 flex-col xl:flex-row items-center xl:justify-center bg-zinc-800">
+                    <div className="text-white text-center text-[10px] tracking-wide">
+                        © Nintendo. <br />
+                        Games are property of their respective owners. <br />
+                        Nintendo of America Inc. <br />
+                        Headquarters are in Redmond, Washington, USA
                     </div>
-                {/* </div> */}
+
+                    <div className="flex gap-5 text-white text-[10px] font-light">
+                        {contactData.map((text, index) => {
+                            return <div key={index}>{text}</div>
+                        })}
+                    </div>
+
+                    <div className="text-white text-sm">🇺🇸 English (United States)</div>
+
+                </div>
 
             </div>
 
