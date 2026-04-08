@@ -1,10 +1,12 @@
+
+
 type FeatureTileProp = {
-    id?: number;
+    loading?: boolean
     name?: string;
     background_image?: string;
 }
 
-function FeatureTile({ name, background_image }: FeatureTileProp){
+function FeatureTile({ loading, name, background_image }: FeatureTileProp){
 
     return(
         <>
