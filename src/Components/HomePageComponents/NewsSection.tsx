@@ -8,9 +8,7 @@ function NewsSection(){
             <div className="mx-4 lg:mx-6 pb-8 md:pb-14 flex flex-col items-center">
 
                 {/* title */}
-                {/* <div className="w-full xl:w-[1200px]"> */}
                 <SectionTitle title="News" />
-                {/* </div> */}
 
                 {/* Big Articles 2x */}
                 <div className="w-full max-w-6xl md:grid md:grid-cols-2 md:gap-8">

@@ -52,9 +52,10 @@ function DashboardPage(){
                     return <RedButtonBlock key={index} data={data} />
                 })}
 
-                {/*  */}
+                {/* ✅ */}
                 <NewsSection />
 
+                {/*  */}
                 <CharactersSection characters={charactersSectionData} />
                 
                 <DigitalsSection />
