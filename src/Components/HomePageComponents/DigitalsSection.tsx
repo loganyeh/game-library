@@ -1,8 +1,8 @@
 import SectionTitle from "./HomepageSharedComps/SectionTitle";
 
 function DigitalsSection(){
-    // const digitalSectionTitles = ["best sellers", "new releases"];
-    const digitalSectionTitles = ["best sellers"];
+    const digitalSectionTitles = ["best sellers", "new releases"];
+    // const digitalSectionTitles = ["best sellers"];
 
     return(
         <>
@@ -14,13 +14,13 @@ function DigitalsSection(){
                                 <div className="border-b-3 border-red-600 w-fit font-semibold text-red-600 text-sm md:text-base tracking-wide">See full list</div>
                                 
                                 <div className="w-full max-w-6xl mt-4 pl-5 pb-6 flex gap-6 overflow-x-auto scroll-smooth">
-                                    {Array.from({length: 3}).map((_, index) => {
-                                        return <div key={index} className="border border-gray-400 w-56 rounded-lg shrink-0">
+                                    {Array.from({length: 10}).map((_, index) => {
+                                        return <div key={index} className="border border-gray-400 w-8/12 md:w-[240px] rounded-lg shrink-0">
                                                     {/* Console Exclusive */}
                                                     <div className="bg-red-600 flex justify-center items-center text-sm text-white font-bold rounded-t-lg">2</div>
 
                                                     {/* Game Image */}
-                                                    <div className="border-t border-white aspect-19/17 bg-blue-300"></div>
+                                                    <div className="border-t border-white aspect-square bg-blue-300"></div>
                                                     {/* <div className="h-52 md:h-[255px] w-full bg-blue-300"></div> */}
 
                                                     {/* BODY */}
