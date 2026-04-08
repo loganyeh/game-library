@@ -47,7 +47,7 @@ function DashboardPage(){
                 {/* ✅ */}
                 <FeaturedSection />
 
-                {/*  */}
+                {/* ✅ */}
                 {redButtonBlockData.map((data, index) => {
                     return <RedButtonBlock key={index} data={data} />
                 })}
