@@ -8,10 +8,10 @@ export type Game = {
 type ShowcaseApi = {
     results: Game[];
 }
-export async function fetchShowcase(){
+export async function fetchGame(){
     const response = await fetch(`https://api.rawg.io/api/games?key=3e947aab0171433bb1b9715a1c39b1fc`);
     const data: ShowcaseApi = await response.json();
-    // console.log(data.results);
+    console.log(data.results);
 
     return data.results;
 }
