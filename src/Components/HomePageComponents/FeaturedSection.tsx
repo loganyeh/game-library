@@ -23,40 +23,23 @@ function FeaturedSection(){
     //     getFeature();
     // }, []);
 
-    useEffect(() => {
-        setLoading(false);
-    }, [])
 
     // console.log(featureData[0]?.platforms[0]?.platform.name);
 
     return(
         <>
-            <div className="border-b border-gray-300 h-auto w-full pb-6 md:pb-12">     
+            <div className="border-b border-gray-300 pb-10 2xl:pb-12">     
                 {/* title */}
-                {/* <div className="xl:pl-5">
-                    <SectionTitle title="Featured"/>
-                </div> */}
-                <SectionTitle title="Featured"/>
+                <div className="mx-4 flex 2xl:justify-center">
+                    <div className="w-full max-w-7xl pt-8 pb-5 tracking-wider text-xl md:text-[28px] text-zinc-700 font-bold">Featured</div>
+                </div>
 
                 {/* Featured Scroll Tiles */}
-                <div className="h-auto w-auto py-1 pb-5 flex justify-start items-start overflow-x-auto scroll-smooth">
-                    {loading ?
-                        (Array.from({length: 10}).map((_, index) => {
-                            return <div key={index} className="border border-gray-300 h-auto w-52 md:w-[275px] mx-4 md:mx-5 rounded-lg shrink-0">
-                                        <div className="h-28 md:h-44 w-full flex justify-center items-center bg-blue-300 rounded-t-lg">
-                                            <div className=""><i className='bx bx-loader-alt text-2xl'></i></div>
-                                        </div>
-                                        <div className="h-36 md:h-40 w-full flex flex-col justify-between md:justify-around items-center rounded-b-lg"></div>
-                                    </div>
-                        }))
-                        :
-                        (Array.from({length: 10}).map((_, index) => {
-                            return <FeatureTile key={index} />
-                        }))
-                        // (featureData.slice(0, 10).map((game, index) => {
-                        //     return <FeatureTile key={index} name={game.name} background_image={game.background_image} />
-                        // }))
-                    }
+                {/* <div className="border flex overflow-x-auto scroll-smooth"> */}
+                <div className="px-4 pb-5 md:pl-8 md:pb-8 flex gap-6 md:gap-8 xl:gap-12 overflow-x-auto scroll-smooth">
+                    {Array.from({length: 10}).map((_, index) => {
+                        return <FeatureTile key={index} />
+                    })}
                 </div>
 
             </div>

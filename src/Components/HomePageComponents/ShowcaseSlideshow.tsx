@@ -7,6 +7,7 @@ function ShowcaseSlideshow(){
     const [loading, setLoading] = useState(true);
     const [showcaseData, setShowcaseData] = useState<Game[]>([]);
 
+    // change api fetch function name
     useEffect(() => {
         async function getShowcase(){
             setLoading(true);

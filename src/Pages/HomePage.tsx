@@ -41,11 +41,13 @@ function DashboardPage(){
                 {/* ✅ */}
                 <Header />
 
-
+                {/* ✅ */}
                 <ShowcaseSlideshow />
 
+                {/* ✅ */}
                 <FeaturedSection />
 
+                {/*  */}
                 {redButtonBlockData.map((data, index) => {
                     return <RedButtonBlock key={index} data={data} />
                 })}
