@@ -37,24 +37,24 @@ function ShowcaseSlideshow(){
                     {/* Preview Slides */}
                     {loading
                     ? 
-                    ((Array.from({length: 4}).map((_, index) => {
+                    (Array.from({length: 4}).map((_, index) => {
                         return <div key={index} className="p-3 bg-blue-300 flex justify-center items-center rounded-lg bg-center bg-cover">
                             <i className='bx bx-loader-alt text-2xl animate-spin'></i>
                         </div>
-                    })))
+                    }))
                     :
                     (showcaseData.length === 0 
                         ?
-                        ((Array.from({length: 4}).map((_, index) => {
+                        (Array.from({length: 4}).map((_, index) => {
                             return <div key={index} className="p-6 bg-gray-300 rounded-lg bg-center bg-cover"></div>
-                        })))
+                        }))
                         : 
-                        ((showcaseData.slice(0, 4).map((game, index) => {
+                        (showcaseData.slice(0, 4).map((game, index) => {
                             return <div key={index} className="p-6 bg-blue-300 rounded-lg bg-center bg-cover" 
                             style={{ backgroundImage: `url(${game.background_image})`}}>
                                 
                             </div>
-                        })))
+                        }))
                     )
                     }
 
