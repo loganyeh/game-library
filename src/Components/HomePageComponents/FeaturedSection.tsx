@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import SectionTitle from "./HomepageSharedComps/SectionTitle";
 import FeatureTile from "./FeaturedComps/FeatureTile";
 import { fetchGame } from "../../API/HomepageAPI";
 import type { Game } from "../../API/HomepageAPI";
@@ -13,8 +12,8 @@ function FeaturedSection(){
         async function getGame(){
             setLoading(true);
 
-            // const data: Game[] = await fetchGame();
-            // setFeatureData(data);
+            const data: Game[] = await fetchGame();
+            setFeatureData(data);
 
             setLoading(false);
         }
