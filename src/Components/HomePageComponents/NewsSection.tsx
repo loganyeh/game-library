@@ -2,8 +2,8 @@ import SectionTitle from "./HomepageSharedComps/SectionTitle";
 import RedClickButton from "./RedButtonBlockComps/RedClickButton";
 
 function NewsSection(){
-    const bigNewsArticleImages = [`images/pokemon_champions.avif`, `images/profile_icon_markers.avif`];
-    const smallNewsArticleImages = [`images/small_news1.avif`, `images/small_news2.avif`, `images/small_news3.avif`, `images/small_news4.avif`];
+    const bigNewsArticleImages = [`/images/pokemon_champions.avif`, `/images/profile_icon_markers.avif`];
+    const smallNewsArticleImages = [`/images/small_news1.avif`, `/images/small_news2.avif`, `/images/small_news3.avif`, `/images/small_news4.avif`];
 
     return(
         <>
@@ -18,7 +18,7 @@ function NewsSection(){
                         return <div key={index} className="mb-8">
                                     
                                     {/* Image */}
-                                    <div className="aspect-16/8 rounded-xl bg-cover bg-center"
+                                    <div className="aspect-[16/8] rounded-xl bg-cover bg-center"
                                     style={{ backgroundImage: `url(${img})`}}></div>
     
                                     {/* Icon & Date */}
