@@ -1,12 +1,7 @@
-import { useEffect, useState } from "react";
-// import { useEffect } from "react";
-
 import SectionTitle from "./HomepageSharedComps/SectionTitle";
 import RedClickButton from "./RedButtonBlockComps/RedClickButton";
 
 import type { RedButtonBlockType } from "../../Pages/HomePage";
-// import { type RedButtonImg } from "../../API/HomepageAPI";
-// import { fetchRedButtonImg, type RedButtonImg } from "../../API/HomepageAPI";
 
 type RedButtonBlockProp = {
     data: RedButtonBlockType;
