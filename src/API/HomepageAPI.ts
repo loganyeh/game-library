@@ -14,7 +14,7 @@ type Platform = {
     }
 }
 
-type GameApi = {
+export type GameApi = {
     results: Game[];
 }
 export async function fetchGame(){

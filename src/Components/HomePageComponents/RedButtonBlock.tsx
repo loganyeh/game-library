@@ -13,25 +13,6 @@ type RedButtonBlockProp = {
 }
 
 function RedButtonBlock({ data }: RedButtonBlockProp){
-    const [loading, setLoading] = useState(true);
-    // const [redData, setRedData] = useState<RedButtonImg[]>([]);
-
-    // useEffect(() => {
-    //     async function getRedButton(){
-    //         setLoading(true); 
-
-    //         const data = await fetchRedButtonImg();
-    //         setRedData(data);
-
-    //         setLoading(false);
-    //     }
-
-    //     getRedButton();
-    // }, [])
-
-    useEffect(() => {
-        setLoading(false);
-    }, [])
 
     return(
         <>
@@ -41,7 +22,10 @@ function RedButtonBlock({ data }: RedButtonBlockProp){
                 <SectionTitle title={data.title} />
 
                 {/* nintendo today image */}
-                <div className="aspect-19/9 md:aspect-[16/2.5] w-full max-w-6xl bg-gray-300 rounded-lg"></div>
+                <div className="aspect-19/9 md:aspect-[16/2.5] w-full max-w-6xl bg-gray-300 rounded-lg bg-cover bg-center"
+                style={{ backgroundImage: `url(${`${data.image}`})`}}>
+
+                </div>
 
                 {/* Description & Button Text */}
                 <div className=" w-full max-w-6xl xl:flex xl:gap-8">
