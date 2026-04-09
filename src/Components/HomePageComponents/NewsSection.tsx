@@ -2,6 +2,8 @@ import SectionTitle from "./HomepageSharedComps/SectionTitle";
 import RedClickButton from "./RedButtonBlockComps/RedClickButton";
 
 function NewsSection(){
+    const bigNewsArticleImages = [`images/pokemon_champions.avif`, `images/profile_icon_markers.avif`];
+    const smallNewsArticleImages = [`images/small_news1.avif`, `images/small_news2.avif`, `images/small_news3.avif`, `images/small_news4.avif`];
 
     return(
         <>
@@ -12,11 +14,12 @@ function NewsSection(){
 
                 {/* Big Articles 2x */}
                 <div className="w-full max-w-6xl md:grid md:grid-cols-2 md:gap-8">
-                    {Array.from({length: 2}).map((_, index) => {
+                    {bigNewsArticleImages.map((img, index) => {
                         return <div key={index} className="mb-8">
                                     
                                     {/* Image */}
-                                    <div className="aspect-16/8 bg-blue-300 rounded-xl"></div>
+                                    <div className="aspect-16/8 rounded-xl bg-cover bg-center"
+                                    style={{ backgroundImage: `url(${img})`}}></div>
     
                                     {/* Icon & Date */}
                                     <div className="py-3 flex gap-2 justify-start items-center">
@@ -36,10 +39,11 @@ function NewsSection(){
 
                 {/* Small Articles 2x2 */}
                 <div className="w-full max-w-6xl mb-6 grid grid-cols-2 gap-6 md:grid-cols-4 md:gap-8">
-                    {Array.from({length: 4}).map((_, index) => {
+                    {smallNewsArticleImages.map((img, index) => {
                         return <div key={index}>
 
-                                    <div className="border border-gray-200 aspect-video bg-red-600 rounded-lg"></div>
+                                    <div className="border border-gray-200 aspect-video rounded-lg bg-cover bg-center"
+                                    style={{ backgroundImage: `url(${img})` }}></div>
                                     {/* <div className="border border-gray-200 h-24 md:h-28 lg:h-32 xl:h-36 w-full bg-red-600 rounded-lg"></div> */}
 
                                     <div className="mt-2 md:mt-3 flex items-center">

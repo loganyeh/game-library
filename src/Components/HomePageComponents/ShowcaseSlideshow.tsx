@@ -1,18 +1,16 @@
 import { useEffect, useState } from "react";
-import { fetchShowcase } from "../../API/HomepageAPI";
-
+import { fetchGame } from "../../API/HomepageAPI";
 import type { Game } from "../../API/HomepageAPI";
 
 function ShowcaseSlideshow(){
     const [loading, setLoading] = useState(true);
     const [showcaseData, setShowcaseData] = useState<Game[]>([]);
 
-    // change api fetch function name
     useEffect(() => {
         async function getShowcase(){
             setLoading(true);
 
-            // const data = await fetchShowcase();
+            // const data = await fetchGame();
             // setShowcaseData(data);
 
             setLoading(false);
@@ -24,8 +22,10 @@ function ShowcaseSlideshow(){
     return(
         <>
             {/* Image Slideshow */}
-            <div className="aspect-15/16 xl:aspect-16/6 flex justify-center items-center bg-blue-300">
-                {/* add api stuff here */}
+            <div className={`${loading ? `bg-blue-300` : `bg-gray-300`} aspect-15/16 xl:aspect-16/6 flex justify-center items-center bg-cover bg-center`} 
+            style={{ backgroundImage: `${loading ? `` : `url(${showcaseData[8]?.background_image})` }` }}>
+                <i className={`${loading ? `bx bx-loader-alt text-4xl animate-spin` : `hidden`}`}></i>
+                <div className={`${showcaseData.length === 0 && !loading ? `` : `hidden`} `}>api turned off</div>
             </div>
 
             {/* Slideshow Preview */}
@@ -35,9 +35,28 @@ function ShowcaseSlideshow(){
                     <i className='bx bx-pause text-white text-4xl bg-red-600 rounded-full'></i>
 
                     {/* Preview Slides */}
-                    {Array.from({length: 4}).map((_, index) => {
-                        return <div key={index} className="p-6 bg-blue-300 rounded-lg bg-center bg-cover"></div>
-                    })}
+                    {loading
+                    ? 
+                    (Array.from({length: 4}).map((_, index) => {
+                        return <div key={index} className="p-3 bg-blue-300 flex justify-center items-center rounded-lg bg-center bg-cover">
+                            <i className='bx bx-loader-alt text-2xl animate-spin'></i>
+                        </div>
+                    }))
+                    :
+                    (showcaseData.length === 0 
+                        ?
+                        (Array.from({length: 4}).map((_, index) => {
+                            return <div key={index} className="p-6 bg-gray-300 rounded-lg bg-center bg-cover"></div>
+                        }))
+                        : 
+                        (showcaseData.slice(0, 4).map((game, index) => {
+                            return <div key={index} className="p-6 bg-blue-300 rounded-lg bg-center bg-cover" 
+                            style={{ backgroundImage: `url(${game.background_image})`}}>
+                                
+                            </div>
+                        }))
+                    )
+                    }
 
                 </div>
             </div>

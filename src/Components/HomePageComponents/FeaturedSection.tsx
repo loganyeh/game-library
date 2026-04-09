@@ -1,30 +1,26 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import SectionTitle from "./HomepageSharedComps/SectionTitle";
 import FeatureTile from "./FeaturedComps/FeatureTile";
-// import { fetchFeature } from "../../API/HomepageAPI";
-// import type { FeatureDM } from "../../API/HomepageAPI";
-// import { useFetcher } from "react-router-dom";
+import { fetchGame } from "../../API/HomepageAPI";
+import type { Game } from "../../API/HomepageAPI";
+
 
 function FeaturedSection(){
     const [loading, setLoading] = useState(true);
-    // const [featureData, setFeatureData] = useState<FeatureDM[]>([]);
+    const [featureData, setFeatureData] = useState<Game[]>([]);
 
-    // useEffect(() => {
-    //     async function getFeature(){
-    //         setLoading(true);
+    useEffect(() => {
+        async function getGame(){
+            setLoading(true);
 
-    //         const data = await fetchFeature();
-    //         setFeatureData(data);
+            // const data: Game[] = await fetchGame();
+            // setFeatureData(data);
 
-    //         setLoading(false);
-    //     }
+            setLoading(false);
+        }
 
-    //     getFeature();
-    // }, []);
-
-
-    // console.log(featureData[0]?.platforms[0]?.platform.name);
+        getGame();
+    }, [])
 
     return(
         <>
@@ -35,11 +31,24 @@ function FeaturedSection(){
                 </div>
 
                 {/* Featured Scroll Tiles */}
-                {/* <div className="border flex overflow-x-auto scroll-smooth"> */}
                 <div className="px-4 pb-5 md:pl-8 md:pb-8 flex gap-6 md:gap-8 xl:gap-12 overflow-x-auto scroll-smooth">
-                    {Array.from({length: 10}).map((_, index) => {
-                        return <FeatureTile key={index} />
-                    })}
+                    {loading
+                    ?
+                    ((Array.from({length: 10}).map((_, index) => {
+                        return <FeatureTile key={index} loading={loading}/>
+                    })))
+                    :
+                    (featureData.length === 0 
+                        ? 
+                        ((Array.from({length: 10}).map((_, index) => {
+                            return <FeatureTile key={index} loading={loading}/>
+                        })))
+                        : 
+                        ((featureData.slice(0, 5).map((game, index) => {
+                            return <FeatureTile key={index} name={game.name} background_image={game.background_image} platform={game.platforms[0].platform.name} />
+                        })))
+                    )
+                    }
                 </div>
 
             </div>
