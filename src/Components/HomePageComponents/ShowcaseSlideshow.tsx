@@ -10,8 +10,8 @@ function ShowcaseSlideshow(){
         async function getShowcase(){
             setLoading(true);
 
-            const data = await fetchGame();
-            setShowcaseData(data);
+            // const data = await fetchGame();
+            // setShowcaseData(data);
 
             setLoading(false);
         }

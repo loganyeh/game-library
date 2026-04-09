@@ -14,8 +14,8 @@ function DigitalsSection(){
         async function getDigital(){
             setLoading(true);
 
-            const data = await fetchCharacters();
-            setDigitalData(data);
+            // const data = await fetchCharacters();
+            // setDigitalData(data);
 
             setLoading(false);
         }

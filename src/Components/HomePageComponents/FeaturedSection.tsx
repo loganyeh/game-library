@@ -12,8 +12,8 @@ function FeaturedSection(){
         async function getGame(){
             setLoading(true);
 
-            const data: Game[] = await fetchGame();
-            setFeatureData(data);
+            // const data: Game[] = await fetchGame();
+            // setFeatureData(data);
 
             setLoading(false);
         }

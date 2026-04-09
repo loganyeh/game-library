@@ -17,8 +17,8 @@ function CharactersSection({ characters }: CharacterProp){
         async function getCharacters(){
             setLoading(true);
 
-            const data = await fetchCharacters();
-            setCharacterData(data);
+            // const data = await fetchCharacters();
+            // setCharacterData(data);
 
             setLoading(false);
         }
