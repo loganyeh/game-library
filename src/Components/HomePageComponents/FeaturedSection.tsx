@@ -43,7 +43,7 @@ function FeaturedSection(){
                             return <FeatureTile key={index} loading={loading}/>
                         })))
                         : 
-                        ((featureData.slice(0, 5).map((game, index) => {
+                        ((featureData.slice(0, 10).map((game, index) => {
                             return <FeatureTile key={index} name={game.name} background_image={game.background_image} platform={game.platforms[0].platform.name} />
                         })))
                     )
